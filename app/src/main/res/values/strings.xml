@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Small Business Plan</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="this_process_is_irreversible">(This Process Is IRREVERSIBLE)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv2">debtorsD = (salesD /365) * customerDaysCreditD)*-1
+creditorsD = (costofSalesD)/365)*supplierDays CreditD)
+operatingProfitD = (salesD - costOfSalesD- expenses D)
+netCashD =(debtorsD + creditors D+ operatingProfitD) \n\nInformed by:\n<a href="http://www.accaglobal.com/uk/en/student/exam-supportresources/fundamentals-exams-study-resources/f2/technical-articles/ratio-analysis.html">http://www.accaglobal.com/uk/en/student/exam-support
+resources/fundamentals-exams-study-resources/f2
+/technical-articles/ratio-analysis.html
+</a></string>
+    <string name="hyperlinkForcast1">salesYearOneD=CalcFutureAmount(salesYearOneHeadD,
+salesGrowth PercentD, 0.00)
+salesYearTwoD=CalcFutureAmount(sales YearOneHeadD,
+salesGrowth PercentD, 1.00)
+salesYearThreeD=CalcFutureAmount(sales YearOneD, salesGrowthPercentD, 2.00)\nCOSYearOneD=(sales YearOneD* (ForecastCoSPercentD/
+100))\nCOSYearTwoD=(sales YearTwo D* (ForecastCOSPercentD/
+100))\nCOSYearThreeD=(sales YearThree D*(ForecastCOSPercentD/
+100))\ngross ProfitYearOneD=(salesYearOneD-coSYearOneD)
+grossProfitYearTwoD= (salesYearTwoD-COSYearTwoD)
+grossProfitYearThreeD=(salesYearThreeD-COSYearThreeD)
+expenses YearOneD= (CalcFutureAmount(expen
+sesYearOneHeadD, expenses Growth PercentD,
+0.00))
+expensesYearTwoD= (CalcFutureAmount (expe
+nsesYearOneHeadD, expenses Growth PercentD,
+1.00)\nexpensesYearThreeD=(CalcFutureAmount(expe
+nsesYearOneHeadD, expenses Growth PercentD,
+2.00))
+netProfitYearOneD=(grossProfitYearOneD-expenses YearOn
+eD)\n netProfitYearTwoD=(gross ProfitYear TwoD-expenses YearT
+woD)\n netProfitYearThreeD=(grossProfitYearThreeD-expenses Year
+ThreeD)\n\n\nCalcFutureAmount Function:\nint CalcFutureAmount(Double StartAmount, double
+AnnualInterest, double Years){\nint FutureAmountl 0\ndouble FutureAmountD = 0.00\ndouble Decimallnterest =\nAnnuallnterest/100n FutureAmountD =\nStartAmount (Math.pow(1+DecimalInterest), Years))\n
+FutureAmountl = (int)FutureAmountD\nreturn FutureAmountl\n}\n\nInformed by:\n<a href="http://www.accaglobal.com">http://www.accaglobal.com\n\n</a>
+    <a href="http://www.accountingcoach.com">http://www.accountingcoach.com\n\n</a>
+    <a href="http://a4id.org>files>user>documents">http://a4id.org>files>user>documents\n\n</a>
+    <a href="http://www.gov.uk">http://www.gov.uk\n\n</a>
+        <a href="http://www.investopedia.com">http://www.investopedia.com\n\n</a>
+             <a href="http://en.m.wikipedia.org">http://en.m.wikipedia.org</a>
+    </string>
+
+    <string name="hyperlinkLoan">interestPerMonth D = (interestPercentD / 1200)\nmonthlyRepayD = (interestPerMonthD * IoanAmountD)/
+(1-(Math.pow (1 + interest PerMonthD), (-1*
+monthsTo RepayD)))
+totalRepayD = (monthlyRepayD * monthsToRepayD)\n\nInformed by:\n<a href="https://en.m.wikipedia.org/wiki">https://en.m.wikipedia.org/wiki</a>
+  </string>
+
+    <string name="hyperlinkMargin">salesNetD (salesPriceD - (sales PriceD - (salesPriceD/(1
++(vatPercentD) / 100)))\ngrossProfitD = (salesNetD - costPriceD)\nmarkupPercentD ((sales NetD - costPriceD) / costPriceD)
+*100)\nmarginPercentD (salesNetD - costPriceD) / salesNetD)*
+100\n\nInformed by:\n<a href="http://www.investopedia.com/ask/answers/102714/whats-difference-between-profit-margin-and-markup.asp">http://www.investopedia.com/ask/answers/102714/whats
+-difference-between-profit-margin-and-markup.asp</a>
+    </string>
+
+    <string name="hyperlinkMarkup">salesNetPriceD (costPriceD + (costPriceD*
+(markupPercentD/ 100))\nvatD salesNetPriceD * (vatPercentD/100)\nmarginPercentD (salesNetPriceD - costPriceD)
+salesNetPriceD) * 100\ngrossProfitPercentD = (salesNetPriceD - costPriceD)\nsalesGrossPriceD (salesNetPriceD + vatD)
+Informed by:\n<a href="http://www.investopedia.com/ask/answers/102714/whats-difference-between-profit-margin-and-markup.asp">http://www.investopedia.com/ask/answers/102714/whats
+-difference-between-profit-margin-and-markup.asp</a>
+    </string>
+
+    <string name="hyperlinkProfit">grossProfitD = salesD - costOfSalesD\ngrossProfitPercentD = (grossProfitD/ salesD) * 100\nexpensesTotalD = expensesD +depreciationD +
+interestChargesD\noperatingProfitD (grossProfitD - (expensesD +
+depreciationD))\n
+operatingProfitPercentD (operatingProfitD / salesD) * 100\nnetProfitD = grossProfitD expenses TotalD\nnetProfitPercentD (netProfitD / salesD) * 100\ncashGenerationD = (grossProfitD expensesD)\nbreakevenSalesD = (expensesTotalD /
+(grossProfitPercentD/ 100))\n
+breakevenSales PercentD = (breakevenSalesD / salesD) *100)\nbreakevenDays D = (breakevenSalesD/ (salesD / 365)\n
+Informed by:\n\n<a href="http://www.investopedia.com/ask/answers/031015/what-difference-between-gross-profit-operating-profit-and-net-income.asp">http://www.investopedia.com/ask/answers/031015/what
+-difference-between-gross-profit-operating-profit-and-net
+-income.asp\n\n</a>
+        <a href="https://en.m.wikipedia.org/wiki/Gross_profit">https://en.m.wikipedia.org/wiki/Gross_profit\n\n</a>
+         <a href="http://www.investopedia.com/articles/analyst/020602.asp">http://www.investopedia.com/articles/analyst/020602.asp\n\n</a>
+              <a href="http://www.accountingcoach.com/blog/break-even-point-2">http://www.accountingcoach.com/blog/break-even-point-2</a>
+    </string>
+
+    <string name="hyperlinkVatFromNetPrice">vat1D ((salesNetPrice1D) * (vatPercent 1 D/ 100);\nsalesGrossPrice1 D = salesNetPrice1D + vat1D\nInformed by:\n\n<a href="https://www.gov.uk/vat-businesses/inclusive-exclusiveprices">https://www.gov.uk/vat-businesses/inclusive-exclusive
+prices</a>
+  </string>
+
+    <string name="hyperlinkVATfromGrossprice">vat2D ((salesGrossPrice2D - (sales Gross Price2D / (1+(vatPercent2D/ 100))))\nsalesNetPrice2D = salesGrossPrice2D - vat2D\nInformed by:\n\n<a href="https://www.gov.uk/vat-businesses/inclusive-exclusiveprices">https://www.gov.uk/vat-businesses/inclusive-exclusive
+prices</a>
+  </string>
+
+    <string name="hyperlinkSales">stage1Convert PercentD= (salesstage1D/salesstage1D)*100\n
+stage2ConvertPercentD= (salesstage2D/salesstage1 D)*100\n
+stage3Convert PercentD= (salesstage3D/salesstage 1D)*100\n
+stage4Convert PercentD= (salesstage4D/salesstage1 D)*100\n
+actualBuyersConvert PercentD= (actualbuyers D/salesstage 1D)*100\n
+targetStage1D=(targetbuyersD/(actualBuyers Convert PercentD/100))\n
+targetStage2D= (targetStage1 D*(stage2ConvertPercentD/100))\n
+targetStage3D= (targetStage1 D (stage3Convert PercentD/100))\n
+        targetStage4D= (targetStage1D*(stage4ConvertPercentD/100))\n
+        targetBuyersCalcD=(targetStage1D*(actualBuyersConvertPercentD/100))\nInformed by:\n\nThe helpful summary of funnel analysis in Wikipedia and
+        the article referenced\nJansen, B. J. and Schuster, S. (2011) Bidding on the Buying
+        Funnel for Sponsored Search Campaigns, Journal of
+        Electronic Commerce Research. 12(1), 1-18
+        Also helpful summaries and examples calculations at:\n\n<a href="https://blog.udemy.com/sales-funnel/">https://blog.udemy.com/sales-funnel/\n\n</a>
+        <a href="http://www.insightsquared.com/2013/11/the-basics-of-sales-funnel-conversion-analysis/">http://www.insightsquared.com/2013/11/the-basics-of
+        -sales-funnel-conversion-analysis/\n\n</a>
+        <a href="http://think2grow.com/marketing-resource-library/productivity-tools-and-templates/sales-funnel-calculator/">http://think2grow.com/marketing-resource-library
+        /productivity-tools-and-templates/sales-funnel-calculator/\n\n</a>
+        <a href="https://www.marketizator.com/blog/e-commerce-funnelhtml">https://www.marketizator.com/blog/e-commerce-funnelhtml\n\n</a>
+          <a href="https://www.mindtools.com/pages/article/newLDR 94.htm">https://www.mindtools.com/pages/article/newLDR 94.htm\n\n</a>
+          <a href="http://blog.close.io/cold-calling-conversion-funnelanalytics">http://blog.close.io/cold-calling-conversion-funnelanalytics\n</a>
+  </string>
+</resources>

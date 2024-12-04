@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Gst_Vat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrol"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="Sales Net Price">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sales_net_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="GST/VAT (sales tax) %">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tax1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/calculate"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Calculate"
+                        android:textColorHint="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate">
+
+                        <TextView
+                            android:id="@+id/a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Result : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:text="GST/VAT (sales tax) : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tax1_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="10dp"
+                            android:text=" " />
+
+                        <TextView
+                            android:id="@+id/b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a1"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Sales Gross Price : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/salesgrossprice_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tax1_result"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="6dp"
+                            android:text=" " />
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/r1"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="Sales Gross Price">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sales_gross_profit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edit1"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="GST/VAT (sales tax) %">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tax_percent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/calculate2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/edit2"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Calculate"
+                        android:textColorHint="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/r2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate2">
+
+                        <TextView
+                            android:id="@+id/aa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Result : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/a11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/aa"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:text="GST/VAT (sales tax) : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tax2_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/aa"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="10dp"
+                            android:text=" " />
+
+                        <TextView
+                            android:id="@+id/b2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a11"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Sales Net Price : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/salesnetprice_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tax2_result"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="6dp"
+                            android:text=" " />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/formula"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/r2"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Read Formulas And Acknowledgements"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+            <!--    <EditText-->
+            <!--        android:id="@+id/sales_net_price"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="Sales Net Price" />-->
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/tax1"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@+id/sales_net_price"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="GST/VAT (sales tax) %" />-->
+
+            <!--    <Button-->
+            <!--        android:id="@+id/calculate"-->
+            <!--        android:layout_below="@+id/tax1"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="Calculate"/>-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/tax1_result"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/calculate"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:text="GST/VAT (sales tax) : " />-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/salesgrossprice_result"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/tax1_result"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:text="Sales Gross Price : " />-->
+
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/sales_gross_profit"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@+id/salesgrossprice_result"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginTop="130dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="Sales Gross Price" />-->
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/tax_percent"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@+id/sales_gross_profit"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="GST/VAT (sales tax) %" />-->
+
+            <!--    <Button-->
+            <!--        android:id="@+id/calculate2"-->
+            <!--        android:layout_below="@+id/tax_percent"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:hint="Calculate"/>-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/tax2_result"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/calculate2"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:text="GST/VAT (sales tax) : " />-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/salesnetprice_result"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/tax2_result"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:text="Sales Net Price : " />-->
+            <RelativeLayout
+                android:id="@+id/btnbacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrol"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrol"
+                app:layout_constraintVertical_bias="1">
+
+                <FrameLayout
+                    android:id="@+id/GstBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

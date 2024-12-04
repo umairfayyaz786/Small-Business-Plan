@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawyerlayout2"
+    android:background="#F9F9F9"
+    tools:context=".Activities.SettingOutTheBasics">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrool"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/bannerad"
+        android:layout_height="0dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Setting Out the Basics"
+            android:layout_marginTop="3dp"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginLeft="7dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Define your goals"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="12dp"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do you want financial independence, eventually selling your business to the highest bidder? Do you want something small and sustainable, that you love doing and from which you want to derive a steady income? These are the things that are good to know very early on"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Choose an idea"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="It might be a product you've always wanted to make, or a service you feel people need. It might even be something people don't know they need yet, because it hasn't been invented!"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="It can be helpful to have people who are bright and creative join you for a casual brainstormingsession. Start with a simple question like: What shall we do? The idea is not to create a business plan, just to generate potential ideas. Many of the ideas will be duds, and there will be quite a few ordinary ones, but a few may emerge that have real potential"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Consider your talents, experience, and knowledge when selecting a concept. If you have a particular skill set or talent, consider how these resources can be applied to meeting some sort of market demand. Combining skill and knowledge with a market demand increases your odds of having a successful business idea."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="For example, you may have worked with electronics as an employee for many years. You may have noticed a demand in your community for a particular form of electrical work, and combining your experience with the market demand can allow you to attract customers."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Create a working name."
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"
+            android:text="You could even do this before you have an idea for the business, and if the name is good, you may find it helps you define your business idea. As your plan grows, and things begin to take shape, the perfect name may come to you, but don't let that hinder you in the early phases. Create a name that you can use while you plan and don't hesitate to change it later"
+            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:layout_marginTop="7dp"
+                android:text="Always check to see if the name is being used by somebody else before selecting it. Try to create a name that is simple and memorable."
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Think of popular brand names like Apple. These names are memorable, simple, and easy to pronounce."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Define your team"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Will you do this alone, or will you bring in one or two trusted friends to join you? This brings a lot of synergy to the table, as people bounce ideas off each other. Two people together can often create something that is greater than the sum of the two separate parts."
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Think of some of the biggest success stories in recent times, such as John Lennon and Paul McCartney; Bill Gates and Paul Allen; Steve Jobs and Steve Wozniak; and Larry Page and Sergey Brin. In every case, the partnership brought out the best in both sides of the equation."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Think about the areas that you are either weak in, or have little knowledge of. Finding partners compatible with your personality who can fill in your knowledge or skill gaps is an excellent way to ensure your business has the resources you need to succeed."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Choose your partners wisely"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When choosing the person or people you're going to build the business with, be careful. Even if someone is your best friend, it doesn't mean that you will partner well in a business operation. Start it with a reliable person. Things to consider when choosing your co-leaders and support cast include:"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Does the other person complement your weaknesses? Or do both of you bring only one set of the same skills to the table? If the latter, be wary as you can have too many people doing the same thing while other things are left unattended."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you see eye to eye on the big picture? Arguments about the details are a given, and are important for getting things right. But not seeing eye to eye on the big picture, the real purpose of your business, can cause a split that may be irreparable. Be sure your team cares about the and buys into the purpose as much as you do."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If interviewing people, do some reading on how to spot real talent beyond the certifications, degrees or lack thereof. The area an individual is educated in is not necessarily the area they are most talented in. An interviewee may have a background in accounting for example, but their experience and your assessment of them indicates they may be a better fit helping with marketing."
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+        <LinearLayout
+            android:id="@+id/bannerad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrool"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:orientation="vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
+</androidx.drawerlayout.widget.DrawerLayout>

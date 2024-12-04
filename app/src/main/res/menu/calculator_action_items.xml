@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ReviewsAction"
+        android:title="ReviewsAction"
+        android:icon="@drawable/star_rate_actionbar"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/SettingsAction"
+        android:title="SettingsAction"
+        android:icon="@drawable/settings_actionbar"
+        app:showAsAction="always"/>
+</menu>

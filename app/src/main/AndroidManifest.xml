@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.smallbusinessplan">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmallBusinessPlan"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.CategoriesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Activities.FormulasActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.SettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Sales"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Gst_Vat"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Markup"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Margin"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.BreakEven"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Discount"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.NetProfit"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Market"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Cash"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Dabtors"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Gross_profit"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Creditor"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Contract"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Extensions.Calculator"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Main"
+            android:exported="true"
+            android:screenOrientation="portrait">
+    </activity>
+
+        <activity
+            android:name=".GetStarted"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".Activities.LaunchingYourBusiness"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.MarketingYourBusiness"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.CoveringTheLegalSide"
+            android:exported="false"
+            android:theme="@style/Theme.SmallBusinessPlan"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.ManaginYourFinances"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.WritingAbusinessPlan"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.SettingOutTheBasics"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

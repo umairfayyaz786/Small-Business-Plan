@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Contract">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrol"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/firsttv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Did a person or company make a clear offer to provide goods or services?"
+            android:textColor="#605B5B"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:id="@+id/firstradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firsttv">
+
+            <RadioButton
+                android:id="@+id/yesradio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/noradio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/secondtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstradio"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Was the offer for goods or services awful?"
+            android:textColor="#605B5B"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:id="@+id/secondradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondtv">
+
+            <RadioButton
+                android:id="@+id/yesradio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/thirdtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondradio"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Was the offer for goods or services clearly accepted by another person or company?"
+            android:textColor="#605B5B"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:id="@+id/thirdradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdtv">
+
+            <RadioButton
+                android:id="@+id/yesradio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/forthtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdradio"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Was some form of payment made in exchange for the goods or services offered?"
+            android:textColor="#605B5B"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:id="@+id/forthradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forthtv">
+
+            <RadioButton
+                android:id="@+id/yesradio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+        <TextView
+            android:layout_below="@+id/forthradio"
+            android:id="@+id/fifthtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Was the agreement informally between friends or family?"
+            android:textSize="16dp"
+            android:textColor="#605B5B"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/fifthradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fifthtv">
+
+            <RadioButton
+                android:id="@+id/yesradio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+        <TextView
+            android:layout_below="@+id/fifthradio"
+            android:id="@+id/sixthtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Was the agreement in writing?"
+            android:textSize="16dp"
+            android:textColor="#605B5B"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/sixthradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sixthtv">
+
+            <RadioButton
+                android:id="@+id/yesradio6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+        <TextView
+            android:layout_below="@+id/sixthradio"
+            android:id="@+id/seventhtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Was the agreement for land or for a lease of over three years duration?"
+            android:textSize="16dp"
+            android:textColor="#605B5B"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/eightradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seventhtv">
+
+            <RadioButton
+                android:id="@+id/yesradio7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noradio7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/btncalculate"
+            android:layout_below="@+id/eightradio"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="calculate"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#9F9B9B"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btncalculate"
+            android:text="Result : "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/outputofcalculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textColor="#605B5B"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/formula"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/outputofcalculation"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="32dp"
+            android:backgroundTint="#017CF5"
+            android:hint="Read Formulas And Acknowledgements"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+</ScrollView>
+            <RelativeLayout
+                android:id="@+id/btnbacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrol"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrol"
+                app:layout_constraintVertical_bias="1">
+
+                <FrameLayout
+                    android:id="@+id/ContractBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

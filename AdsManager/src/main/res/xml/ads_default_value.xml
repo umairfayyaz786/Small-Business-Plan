@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>ADMOB_APP_ID</key>
+        <value>ca-app-pub-3940256099942544~3347511713</value>
+        <key>ADMOB_INTERSTITIAL_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+        <key>ADMOB_BANNER_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/6300978111</value>
+        <key>ADMOB_REWARD_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/5354046379</value>
+        <key>ADMOB_REWARD_INTERSTITIAL_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/5354046379</value>
+        <key>ADMOB_NATIVE_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/2247696110</value>
+        <key>ADMOB_APP_OPEN_ADS_ID</key>
+        <value>ca-app-pub-3940256099942544/3419835294</value>
+        <key>APPLOVIN_SDK_KEY</key>
+        <value>SDK_KEY</value>
+        <key>APPLOVIN_INTERSTITIAL_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>APPLOVIN_BANNER_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>APPLOVIN_BANNER_LEADER_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>APPLOVIN_BANNER_MERC_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>APPLOVIN_REWARD_ADS_ID</key>
+        <key>MAX_INTERSTITIAL_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>MAX_BANNER_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>MAX_BANNER_MERC_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>MAX_REWARD_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+        <key>MAX_Native_ADS_ID</key>
+        <value>YOUR_AD_UNIT_ID</value>
+    </entry>
+</defaultsMap>

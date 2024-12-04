@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "389616912844",
+    "project_id": "dynamiclinks-f36d9",
+    "storage_bucket": "dynamiclinks-f36d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389616912844:android:a1bbfa579cbc79d0fd3569",
+        "android_client_info": {
+          "package_name": "com.example.ads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6yNw9sv9YNUZSzG2Ciuk1MQ33ceXFiO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389616912844:android:3271c7df8d24c757fd3569",
+        "android_client_info": {
+          "package_name": "com.mobinatores.developer.dynamiclink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389616912844-imq7lk4gqr0a6v9rsthmj6afsgu3d44j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobinatores.developer.dynamiclink",
+            "certificate_hash": "3e164bd79f62dab8b82a206e1529b9759239f141"
+          }
+        },
+        {
+          "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6yNw9sv9YNUZSzG2Ciuk1MQ33ceXFiO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389616912844:android:199d3fc1c2234ed3fd3569",
+        "android_client_info": {
+          "package_name": "gps.videoeditor.videorecorder.screenrecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389616912844-9hrnjt2n6sffvnr6a8rh36dlccg4ebsa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gps.videoeditor.videorecorder.screenrecorder",
+            "certificate_hash": "94c1eb8c42c15f36c2d6b6990d7ec320f90255c9"
+          }
+        },
+        {
+          "client_id": "389616912844-t6o10dgbgmvss3bc1p3b640albvtl6nm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gps.videoeditor.videorecorder.screenrecorder",
+            "certificate_hash": "3e164bd79f62dab8b82a206e1529b9759239f141"
+          }
+        },
+        {
+          "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6yNw9sv9YNUZSzG2Ciuk1MQ33ceXFiO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389616912844-ro9bt40n4p2vl4fu3ha7jfi6rodoh3nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

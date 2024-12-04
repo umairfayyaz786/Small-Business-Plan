@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.BusinessSales">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Actual Numbers"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/oneet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/actual"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:hint="Sales stage 1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sale1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/twoet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/oneet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Sales stage 2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sale2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/threeet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/twoet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Sales stage 3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sale3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fouret"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/threeet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Sales stage 4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sale4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fiveet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/fouret"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Buyers (Actual)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BuyersActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sixet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/fiveet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Buyers (Target)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BuyersTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/calculate"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/sixet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Calculate"
+                android:textColorHint="@color/white" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/sixet"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Clear"
+                android:textColorHint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calculate">
+
+                <TextView
+                    android:id="@+id/a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Conversions % : "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Stage 1 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stage1_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a1"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 2 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stage2_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stage1_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 3 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stage3_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stage2_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/c"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 4 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Stage4_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stage3_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/d"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Buyers (Actual)  : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/BuyersActual_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Stage4_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1">
+
+                <TextView
+                    android:id="@+id/aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Target Numbers : "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aa"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Stage 1 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Stage21_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aa"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b1"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 2 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Stage22_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Stage21_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bb"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 3 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Stage23_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Stage22_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cc"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stage 4 : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Stage24_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Stage23_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/ee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dd"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Buyers (Target)  : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/BuyersTarget_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Stage24_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/formula"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/r2"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Read Formulas And Acknowledgements"
+                android:textColorHint="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

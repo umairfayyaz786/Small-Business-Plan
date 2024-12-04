@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawyerlayout1"
+    android:background="#F9F9F9"
+    tools:context=".Activities.CoveringTheLegalSide">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrool"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/bannerad"
+        android:layout_height="0dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covering the Legal Side"
+        android:layout_marginTop="3dp"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:layout_marginLeft="7dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Consider finding an attorney or other legal advisor."
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There will be many hurdles to leap as you go from working stiff to overworked and underpaid small business owner. Some of those hurdles will be composed of stacks of documents with rules and regulations, ranging from building covenants to city ordinances, county permits, state requirements, taxes, fees, contracts, shares, partnerships, and more. Having somebody you can call when the need arises will not only give you peace of mind, it will give you a much-needed resource who can help you plan for success."
+        android:textColor="@color/black"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="\u25CF"
+            android:textColor="@color/black"
+            android:layout_marginTop="7dp"
+            android:textSize="16sp"
+            android:layout_marginRight="2dp" />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Choose someone with whom you click and who shows that he or she understands your business. You will also want someone with experience in this area, as an inexperienced legal advisor could lead you to legal trouble or even fines and prison time."
+            android:textSize="16dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Get an accountant."
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="You’ll want someone who can deftly handle your financials, but even if you feel you can handle your own books, you’ll still need someone who understands the tax side of running a business. Taxes with businesses can get complicated, so you’ll need (at a minimum) a tax advisor. Again, no matter how much of your finances they’re handling, this should be someone trustworthy."
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. From a business entity."
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18dp"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="You’ll need to decide what type of business entity you want to be, for tax purposes and hopefully to eventually attract investors. You will do this after you've decided whether you will need money from others either in equity or loans and with the advice of your legal and accounting experts. It is one of the last steps taken before you actually spend money or ask someone for money. Most people are familiar with corporations, LLCs, etc., but for the vast majority of small business owners, you will need to form one of the following:"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="A sole proprietorship, if you will be running (not including employees) this business on your own or with your spouse."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="A general partnership, if you will be running this business with a partner."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="A limited partnership, which is composed of a few general partners, who are liable for problems with the business, and a few limited partners, who are only liable for the amount in which they invest in the business. All share profits and losses."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="\u25CF"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="16sp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="A limited liability partnership (LLP), where no partner is liable for another’s negligence."
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+        <LinearLayout
+            android:id="@+id/bannerad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrool"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:orientation="vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
+</androidx.drawerlayout.widget.DrawerLayout>

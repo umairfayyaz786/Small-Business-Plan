@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.BreakEven">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrol"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="sales (per year)">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="110dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="Cost of Sales">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Cost_of_sale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="190dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="Expenses">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Expenses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="270dp"
+                        android:layout_marginRight="32dp"
+                        android:hint="Depreciation">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/depreciation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/calculate"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="350dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Calculate"
+                        android:textColorHint="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate">
+
+                        <TextView
+                            android:id="@+id/a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="40dp"
+                            android:text="Result : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Breakeven sales : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Breakevensales_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a"
+                            android:layout_marginLeft="170dp"
+                            android:layout_marginTop="10dp"
+                            android:text=" " />
+
+                        <TextView
+                            android:id="@+id/b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/a1"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Breakeven sales % : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Breakevensalespercent_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Breakevensales_result"
+                            android:layout_marginLeft="178dp"
+                            android:layout_marginTop="5dp"
+                            android:text=" " />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/b"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Breakeven days :  "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Breakevendays_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Breakevensalespercent_result"
+                            android:layout_marginLeft="170dp"
+                            android:layout_marginTop="5dp"
+                            android:text="" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/formula"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/r1"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Read Formulas And Acknowledgements"
+                        android:textColorHint="@color/white" />
+
+                    <!--    <EditText-->
+                    <!--        android:id="@+id/sale"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_marginLeft="10dp"-->
+                    <!--        android:layout_marginTop="10dp"-->
+                    <!--        android:layout_marginRight="10dp"-->
+                    <!--        android:hint="sales (per year)" />-->
+
+                    <!--    <EditText-->
+                    <!--        android:id="@+id/Cost_of_sale"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_below="@+id/sale"-->
+                    <!--        android:layout_marginLeft="10dp"-->
+                    <!--        android:layout_marginTop="10dp"-->
+                    <!--        android:layout_marginRight="10dp"-->
+                    <!--        android:hint="Cost of Sales" />-->
+                    <!--    <EditText-->
+                    <!--        android:id="@+id/Expenses"-->
+                    <!--        android:layout_below="@+id/Cost_of_sale"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_marginTop="10dp"-->
+                    <!--        android:layout_marginLeft="10dp"-->
+                    <!--        android:layout_marginRight="10dp"-->
+                    <!--        android:hint="Expenses"/>-->
+                    <!--    <EditText-->
+                    <!--        android:id="@+id/depreciation"-->
+                    <!--        android:layout_below="@+id/Expenses"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_marginTop="10dp"-->
+                    <!--        android:layout_marginLeft="10dp"-->
+                    <!--        android:layout_marginRight="10dp"-->
+                    <!--        android:hint="Depreciation"/>-->
+
+                    <!--    <Button-->
+                    <!--        android:id="@+id/calculate"-->
+                    <!--        android:layout_below="@+id/depreciation"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_marginTop="10dp"-->
+                    <!--        android:layout_marginLeft="10dp"-->
+                    <!--        android:layout_marginRight="10dp"-->
+                    <!--        android:hint="Calculate"/>-->
+
+                    <!--    <TextView-->
+                    <!--        android:id="@+id/Breakevensales_result"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_below="@id/calculate"-->
+                    <!--        android:layout_marginLeft="30dp"-->
+                    <!--        android:text="Breakeven sales : " />-->
+                    <!--    <TextView-->
+                    <!--        android:id="@+id/Breakevensalespercent_result"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_below="@id/Breakevensales_result"-->
+                    <!--        android:layout_marginLeft="30dp"-->
+                    <!--        android:text="Breakeven sales % : " />-->
+                    <!--    <TextView-->
+                    <!--        android:id="@+id/Breakevendays_result"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:layout_below="@id/Breakevensalespercent_result"-->
+                    <!--        android:layout_marginLeft="30dp"-->
+                    <!--        android:text="Breakeven days : " />-->
+                </RelativeLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/btnbacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrol"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrol"
+                app:layout_constraintVertical_bias="1">
+
+                <FrameLayout
+                    android:id="@+id/BreakEvenBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

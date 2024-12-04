@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.WritingaBusinessPlanFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrool"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Writing a Business Plan."
+                        android:textColor="#FF9800"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="1. Create a business plan"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="business plan helps to define what you think you need to launch your business, large or small. It summarizes the sense of your business in a single document. It also creates a map for investors, bankers, and other interested parties to use when determining how they can best help you and to help them decide whether or not your business is viable. Your business plan should consist of the elements outlined in the steps below."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="2. Write your business description."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Describe your business more specifically, and how it fits into the market in general. If you are a corporation, LLC, or sole proprietorship, state that, and why you chose to go that route. Describe your product, its big features, and why people will want it. Answer the following questions:"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Who are potential customers? Once you understand who they are and what they want, come up with a marketing strategy."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="What price are they willing to pay for your product or service? Why would they pay for your product or service over your competitor's?"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Who are your competitors? Do a competitive analysis to identify key competitors. Find out who is doing something similar to what you are planning, and how have they been successful. Just as important is to find the failures, and what made their venture fall apart."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="3. Write an operational plan."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="This will describe how you will produce or deliver your product or service and all costs."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="How will you create your product? Is it a service that you are offering, or if it's more complex— software, a physical product like a toy or a toaster — how will it get built? Define the process, from sourcing raw materials to assembly to completion, packaging, warehousing, and shipping. Will you need additional people? Will there be unions involved? All of these things must be taken into account."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Who will lead, and who will follow? Define your organization, from the receptionist up to the CEO, and what part each plays in both function and financials. Knowing your organizational structure will better help you plan your operating costs, and fine-tune how much capital you will need to function effectively."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Getting feedback. Friends and family make great resources for asking questions and getting feedback––don't hesitate to use them as your sounding board."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Needing to increase the size of your premises. This happens more often than expected. Once the stock starts piling up, you may find it ends up in your living room, bedroom and the garden shed. Think rental of storage premises if needed."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="4. Write the marketing plan."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Your operational plan describes how you will produce your product, and your marketing plan describes how you will sell your product. When you create your marketing plan, try to answer the question of how you will make your product known to potential customers."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="You will want to include the type of marketing you will use. For example, will you use radio ads, social media, promotions, billboards, attend networking events, or all of the above?"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="You will also want to define your marketing message. In other words, what will you say to convince customers to choose your product? Here, you want to focus on your Unique Selling Point (also known as USP). This is the unique advantage your product has to solve your customers problem. For example, you may be lower cost, faster, or higher quality than your peers."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="5. Come up with a pricing model."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Start by checking out your competitors. Know how much are they selling a similar product for. Can you add something to it (add value) to make yours different and hence make it a more enticing price?"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Competition isn't just about the goods or services themselves. It is also about your social and environmental credibility. Consumers are increasingly conscious of the need to show that your business is concerned with labor conditions and isn't damaging the environment. Certification endorsements from reputable organizations, such as labels and stars, can reassure customers that your product or service is more aligned with their values than one lacking the certification."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="6. Cover the financials."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="The financial statements translate your marketing and operational plans into numbers — profits and cash flow. They identify how much money you will need and how much you might make. Since this is the most dynamic part of your plan, and perhaps the most important for long-term stability, you should update this monthly for the first year, quarterly for the second year, and then annually after that."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Cover your startup costs. How are you going to finance your business initially? The bank, venture capitalists, angel investors, Small Business Administration (SBA), your own savings: these are all viable options. When you start a business, be realistic. You will probably not roll out of the gate making 100 percent of whatever you project, so you need to have enough ready reserve to fund things until you are really up and running. One of the surest roads to failure is under-capitalization."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="What price do you intend to sell your product or service for? How much will it cost you to produce? Work out a rough estimate for net profit—factoring in fixed costs like rent, energy, employees, etc."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="7. Come up with an executive summary."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="The first part of a business plan is the executive summary. Once you've developed the other parts, describe the overall business concept, how it will be monetized, how much funding you will need, where it stands currently, including its legal standing, people involved and a brief history, and anything else that makes your business look like a winning proposition."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="8. Build your product or develop your service."
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Once you have the business all planned, financed, and have your basic level of staffing, get going. Whether that's sitting down with the engineers and getting the software coded and tested, or getting materials sourced and shipped to your fabrication room (aka garage), or purchasing in bulk and marking up the price, the building process is the time during which you prepare for market. During this time, you may discover things such as:"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginRight="2dp"
+                            android:text="\u25CF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Needing to tweak the ideas. Perhaps the product needs to be a different color, texture or size. Maybe your services need to be broader, narrower or more detailed. This is the time to attend to anything that crops up during your testing and development phases. You'll know innately when something needs tweaking to make it better or to make it less like a competitor's stale offerings."
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/btnbacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrool"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrool"
+                app:layout_constraintVertical_bias="1">
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:drawableLeft="@drawable/arrow_left_back"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+                    app:backgroundTint="@color/ActionBarColor" />
+
+                <FrameLayout
+                    android:id="@+id/SettingBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/back"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</FrameLayout>

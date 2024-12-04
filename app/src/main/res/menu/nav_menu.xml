@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        tools:ignore="HardcodedText"
+        android:icon="@drawable/home"/>
+    <item
+        android:title="Small Business Plan"
+        tools:ignore="HardcodedText">
+
+        <menu>
+            <item
+                android:id="@+id/sharemenu"
+                android:title="Share"
+                android:icon="@drawable/shareblack"/>
+            <item
+                android:id="@+id/review"
+                android:title="Rate/Review"
+                android:icon="@drawable/review"/>
+            <item
+                android:id="@+id/mode1"
+                android:title="Theme"
+                android:icon="@drawable/theme"/>
+            <item
+                android:id="@+id/calculator"
+                android:title="Calculator"
+                android:icon="@drawable/ic_baseline_calculate_24"/>
+
+        </menu>
+    </item>
+</menu>

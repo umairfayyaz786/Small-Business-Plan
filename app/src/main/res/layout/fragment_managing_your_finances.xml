@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ManagingYourFinancesFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrool"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Managing Your Finances"
+                android:layout_marginTop="3dp"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:layout_marginLeft="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Secure start-up costs"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Most businesses require capital to start. Money is typically required to purchase supplies and equipment, as well as keep the business operational for the period before your business becomes profitable. The first place to look for financing is yourself."
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Do you have investments or savings? If so, consider using a portion to fund your business. You should never invest all your savings into a business due to the risk of failure. In addition, you should never invest money put aside for emergency savings (experts recommend having three to six months of income put aside for this purpose), or money you will need over the next few years for various obligations."
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Consider a home equity loan. If you have a home, looking to get a home equity loan can be a wise idea, since these loans are typically easily approved (since your home acts as collateral), and interest rates are typically lower."
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="If you have a 401(k) plan through your employer, consider borrowing against the plan. Plans typically allow you to borrow against 50% of your account balance up to a maximum of $50,000."
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Consider saving ahead as another option. If you have a job, save a portion of your monthly income over time to cover your start-up costs."
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:text="Visit a bank to inquire about small business loans or lines of credit. When doing this, always visit many providers to ensure you are getting the best rate."
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Managing your running costs"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Keep a close eye on your running costs and keep them in line with your projections. Whenever you see something spent wastefully—like electricity, phone plans, stationery, packaging—look around and estimate how much you really need, and minimize or remove the cost in every way possible. Think frugally when you start up, including renting items instead of purchasing them and using pre-paid plans for services your business needs instead of locking yourself into long-term contracts."
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Have more than the minimum."
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="You may determine it will take $50,000 to start your business, and that's fine. You get your $50,000, buy your desks and printers and raw materials, and then then the second month arrives, and you're still in production, and the rent is due, and your employees want to be paid, and all the bills hit at once. When this happens, your only likely recourse will be to pack it in. If you can, try to have the reserves for a year of no income."
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Pinch those pennies"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Plan to keep purchases of office equipment and overheads to a minimum when starting up. You do not need amazing office premises, the latest in office chairs and pricey artwork on the walls. A broom cupboard in the best address can be sufficient if you can artfully steer clients to the local coffee shop for meetings every time (meet them in the foyer). Many a business start-up has failed by purchasing the expensive gizmos instead of focusing on the business itself."
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Decide how to accept payment"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="You will need to do something to get payment from your clients or customers. You can get something like a Square, which is great for small businesses since it requires the minimum amount of paperwork and the fees are minimal. However, if you feel uncomfortable with technology, you can inquire about a more traditional merchant account."
+                android:textColor="@color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_height="wrap_content"
+                    android:text="A merchant account is a contract under which an acquiring bank extends a line of credit to a merchant, who wishes to accept payment card transactions of a particular card association brand. Previously, without such a contract, one could not accept payments by any of the major credit card brands. However, the Square has changed that, so don’t feel locked in or limited to this option. Do your research."
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="The Square is a card swiping device which connects with a smartphone or tablet and turns that device into a sort of cash register. You may have encountered this device in the businesses you frequent, as they are becoming common at coffee shops, restaurants, street food stands and other businesses (look for a postage-stamp sized plastic square plugged into a tablet or phone)."
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_height="wrap_content"
+                    android:text="Note that PayPal, Intuit, and Amazon all offer similar solutions. Make sure to look into all options before making a selection."
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="\u25CF"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="If you are online business, services like PayPal offer an excellent way to receive payment and make transfers."
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+        <RelativeLayout
+            android:id="@+id/btnbacklayout"
+            android:layout_below="@+id/scrool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scrool"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/arrow_left_back"
+                app:backgroundTint="@color/ActionBarColor"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="11dp" />
+            <FrameLayout
+                android:layout_below="@id/back"
+                android:id="@+id/ManagingBannerAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</FrameLayout>

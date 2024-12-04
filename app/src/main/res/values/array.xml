@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+        <item>SELECT TYPES</item>
+        <item>Business</item>
+        <item>Ecommerce</item>
+        <item>Face to Face</item>
+        <item>Retail</item>
+        <item>Telesales</item>
+    </string-array>
+</resources>

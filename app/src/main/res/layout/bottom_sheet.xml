@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/ActionBarColor"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market position can be analyzed above. Market positioning is complex and there are no magic solutions, the analysis here is to provide thinking and allow you to experiment"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/close_bottom_sheet"
+        android:layout_width="110dp"
+        android:layout_height="145dp"
+        android:layout_marginLeft="300dp"
+        android:gravity="center"
+        android:text="Close"
+        android:textSize="17dp"
+        android:textColor="#FF9800"
+        android:textStyle="bold" />
+</RelativeLayout>

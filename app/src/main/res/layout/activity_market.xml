@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Market">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrol"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/btnbacklayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/firsttv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Our Geographic territory is:"
+                            android:textColor="#605B5B"
+                            android:textSize="16dp" />
+
+                        <RadioGroup
+                            android:id="@+id/firstradio1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/firsttv1"
+                            android:layout_marginLeft="37dp">
+
+                            <RadioButton
+                                android:id="@+id/Narrowradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Narrow"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/Wideradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wide"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/secondtv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/firstradio1"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Our potential customers are:"
+                            android:textColor="#605B5B"
+                            android:textSize="16dp" />
+
+                        <RadioGroup
+                            android:id="@+id/secondradio2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/secondtv2"
+                            android:layout_marginLeft="37dp">
+
+                            <RadioButton
+                                android:id="@+id/Specificradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Specific"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/Everyoneradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Everyone"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/thirdtv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/secondradio2"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Our range of products or services are:"
+                            android:textColor="#605B5B"
+                            android:textSize="16dp" />
+
+                        <RadioGroup
+                            android:id="@+id/thirdradio3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thirdtv3"
+                            android:layout_marginLeft="37dp">
+
+                            <RadioButton
+                                android:id="@+id/Fewradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Few"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/Manyradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Many"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/forthtv4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thirdradio3"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Our prices compared to competitors are:"
+                            android:textColor="#605B5B"
+                            android:textSize="16dp" />
+
+                        <RadioGroup
+                            android:id="@+id/forthradio4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/forthtv4"
+                            android:layout_marginLeft="37dp">
+
+                            <RadioButton
+                                android:id="@+id/Lowerradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lower"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/Higherradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Higher"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/fifthtv5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/forthradio4"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Our quality compared to competitors is:"
+                            android:textColor="#605B5B"
+                            android:textSize="16dp" />
+
+                        <RadioGroup
+                            android:id="@+id/fifthradio5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fifthtv5"
+                            android:layout_marginLeft="37dp">
+
+                            <RadioButton
+                                android:id="@+id/Similarradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Similar"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/Betterradio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Better"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/btncalculate"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/fifthradio5"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:backgroundTint="#9F9B9B"
+                            android:text="calculate"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btncalculate"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Result : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/outputofMarketcalculation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/result"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="20dp"
+                            android:text=""
+                            android:textColor="#605B5B"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/formula"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/r1"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="32dp"
+                        android:backgroundTint="#017CF5"
+                        android:hint="Read Formulas And Acknowledgements"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/btnbacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrol"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrol"
+                app:layout_constraintVertical_bias="1">
+
+                <FrameLayout
+                    android:id="@+id/MarketBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

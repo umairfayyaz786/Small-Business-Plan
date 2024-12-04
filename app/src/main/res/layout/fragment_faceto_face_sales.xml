@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FacetoFaceSales">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actual Numbers"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/actual"
+                android:id="@+id/oneet"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="32dp"
+                android:hint="Leads">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Leads"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/twoet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/oneet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Pitches">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Pitches"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/twoet"
+                android:id="@+id/threeet"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Quotations">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Quotations"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/threeet"
+                android:id="@+id/fouret"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint=" ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Quotations1"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/fouret"
+                android:id="@+id/fiveet"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Buyers (Actual)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BuyersActual"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/fiveet"
+                android:id="@+id/sixet"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:hint="Buyers (Target)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BuyersTarget"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/calculate"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/sixet"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Calculate"
+                android:textColorHint="@color/white" />
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/sixet"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Clear"
+                android:textColorHint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calculate">
+
+                <TextView
+                    android:id="@+id/a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Conversions % : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Leads : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Leads_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a1"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Pitches : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Pitches_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Leads_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" " />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b"
+                    android:id="@+id/c"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Quotations : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Quotations_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Pitches_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/c"
+                    android:id="@+id/d"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="     "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Quotations1_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Quotations_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/d"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Buyers (Actual)  : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/BuyersActual_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Quotations1_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1">
+
+                <TextView
+                    android:id="@+id/aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Target Numbers : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aa"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Leads : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tLeads_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aa"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b1"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Pitches : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tpitches_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tLeads_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" " />
+
+                <TextView
+                    android:id="@+id/cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bb"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Quotations : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tQuotations_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tpitches_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cc"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="    "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tQuotations1_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tQuotations_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/ee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dd"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Buyers (Target)  : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/BuyersTarget_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tQuotations1_result"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/formula"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/r2"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#017CF5"
+                android:hint="Read Formulas And Acknowledgements"
+                android:textColorHint="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

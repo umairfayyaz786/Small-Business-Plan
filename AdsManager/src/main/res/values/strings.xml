@@ -1,0 +1,28 @@
+<resources>
+    // AdMob Ads
+    <string name="app_ads_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ads_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="inter_ads_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="native_ads_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="reward_ads_id">ca-app-pub-3940256099942544/5354046379</string>
+    <string name="open_ads_id">ca-app-pub-3940256099942544/3419835294</string>
+    // AppLovin Ads
+    <string name="SDK_KEY">sVWGuOQVG4gzyhb-2Qb6sRTv8qavlPzA-5V-1DcTfCWvHWTNRTTB12ENHdoQyLpX5rp1LVcPGq9Nol8469q4z7</string>
+    <string name="bannerLovin_ads_id">YOUR_ZONE_ID</string>
+    <string name="interLovin_ads_id">YOUR_ZONE_ID</string>
+    <string name="nativeLovin_ads_id">YOUR_ZONE_ID</string>
+    <string name="rewardLovin_ads_id">YOUR_ZONE_ID</string>
+    <string name="openLovin_ads_id">YOUR_ZONE_ID</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="impossible_game" translatable="false">Impossible Game</string>
+    <string name="retry_button_text" translatable="false">Retry</string>
+    <string name="default_coin_text" translatable="false">Coins: 0</string>
+    <string name="more_coins_text" translatable="false">Watch an ad for %d more %s.</string>
+    <string name="video_starting_in_text" translatable="false">Video starting in %d…</string>
+    <string name="negative_button_text" translatable="false">No, thanks</string>
+    <string name="ad_attribution">Ad</string>
+</resources>
