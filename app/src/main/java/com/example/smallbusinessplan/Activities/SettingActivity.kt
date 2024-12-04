@@ -13,43 +13,40 @@ import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
+import com.example.smallbusinessplan.databinding.ActivitySettingBinding
 
 class SettingActivity : AppCompatActivity() {
-
     private var MainMenu: Menu? = null
     private lateinit var sharedPref: SharedPref
+    private lateinit var binding: ActivitySettingBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setting)
+        binding = ActivitySettingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title="Set Your Tax"
-
+        supportActionBar?.title = "Set Your Tax"
         sharedPref = SharedPref(this)
-
-        val tax : EditText = findViewById(R.id.settax)
-        val btnSave:Button = findViewById(R.id.save)
-        tax.setText(sharedPref.getIntegerValue(AppConstants.TEXT_KEY).toString())
-
-        btnSave.setOnClickListener {
-            val set_Tax = tax.text.toString().toDouble()
-            sharedPref.setIntegerValue(AppConstants.TEXT_KEY,set_Tax)
+        binding.settax.setText(sharedPref.getIntegerValue(AppConstants.TEXT_KEY).toString())
+        binding.save.setOnClickListener {
+            val set_Tax = binding.settax.text.toString().toDouble()
+            sharedPref.setIntegerValue(AppConstants.TEXT_KEY, set_Tax)
             Toast.makeText(this, "GST/VAT value saved successfully", Toast.LENGTH_SHORT).show()
         }
-        val formulaBtn:Button = findViewById(R.id.formula)
-        formulaBtn.setOnClickListener {
-            val i = Intent(this , FormulasActivity::class.java)
+        binding.formula.setOnClickListener {
+            val i = Intent(this, FormulasActivity::class.java)
             startActivity(i)
         }
 
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home){
-            val i = Intent(this , Calculator::class.java)
+        if (item.itemId == android.R.id.home) {
+            val i = Intent(this, Calculator::class.java)
             startActivity(i)
         }
-        if (item.itemId == R.id.setting_reviews){
+        if (item.itemId == R.id.setting_reviews) {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -59,14 +56,16 @@ class SettingActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         MainMenu = menu
         menuInflater.inflate(R.menu.setting_review, menu)
         return super.onCreateOptionsMenu(menu)
 
     }
+
     override fun onBackPressed() {
-        val intent = Intent(this , Calculator::class.java)
+        val intent = Intent(this, Calculator::class.java)
         startActivity(intent)
     }
 }

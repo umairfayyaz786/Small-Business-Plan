@@ -30,6 +30,7 @@ import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Fragments.*
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.databinding.ActivityCategoriesBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
@@ -37,6 +38,7 @@ class CategoriesActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
     private var MainMenu: Menu? = null
     private lateinit var navigationView: NavigationView
+    private lateinit var binding: ActivityCategoriesBinding
 
 
     companion object {
@@ -46,7 +48,8 @@ class CategoriesActivity : AppCompatActivity() {
     internal lateinit var sharedpref: SharedPref
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categories)
+        binding = ActivityCategoriesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
         val pager = findViewById<ViewPager>(R.id.viewpager)
@@ -74,12 +77,11 @@ class CategoriesActivity : AppCompatActivity() {
             Main.themeState(themState = sharedpref.getThemState("Theme"))
         }
 
-//        supportActionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.ActionBarColor)))
         navigationView = findViewById(R.id.nav_view)
-        val drawyerLayout: DrawerLayout = findViewById(R.id.drawyerlayout00)
         val navView: NavigationView = findViewById(R.id.nav_view)
-        toggle = ActionBarDrawerToggle(this, drawyerLayout, R.string.open, R.string.close)
-        drawyerLayout.addDrawerListener(toggle)
+        toggle =
+            ActionBarDrawerToggle(this, binding.drawyerlayout000, R.string.open, R.string.close)
+        binding.drawyerlayout000.addDrawerListener(toggle)
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -90,16 +92,20 @@ class CategoriesActivity : AppCompatActivity() {
                     val intent = Intent(this, Main::class.java)
                     startActivity(intent)
                 }
+
                 R.id.sharemenu -> {
                     shareItem()
                 }
+
                 R.id.review -> {
                     reviews()
                 }
+
                 R.id.mode1 -> {
 //                    Mode()
                     Main.Mode(this)
                 }
+
                 R.id.calculator -> {
                     calculator()
                 }
@@ -187,61 +193,6 @@ class CategoriesActivity : AppCompatActivity() {
         alertBuilder.show()
     }
 
-//    private fun Mode() {
-//        val dialog = Dialog(this)
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-//        dialog.setCancelable(true)
-//        dialog.setContentView(R.layout.fortheme)
-//        val darkmode = dialog.findViewById<RadioButton>(R.id.darkmode)
-//        val lightmode = dialog.findViewById<RadioButton>(R.id.lightmode)
-//        val defaultmode = dialog.findViewById<RadioButton>(R.id.defaultt)
-//        val btnOK =dialog.findViewById<Button>(R.id.okselectedtheme)
-//        dialog.show()
-//        btnOK.setOnClickListener {
-//            themeState(themState = themValue)
-//            dialog.dismiss()
-//        }
-//        if (sharedpref.getThemState("Theme") >= -1 && sharedpref.getThemState("Theme") == 0) {
-//            darkmode.isChecked = true
-//            lightmode.isChecked = false
-//            defaultmode.isChecked = false
-//            themeState(themState = sharedpref.getThemState("Theme"))
-//        } else if (sharedpref.getThemState("Theme") >= -1 && sharedpref.getThemState("Theme") == 1) {
-//            lightmode.isChecked = true
-//            darkmode.isChecked = false
-//            defaultmode.isChecked = false
-//            themeState(themState = sharedpref.getThemState("Theme"))
-//        } else {
-//            lightmode.isChecked = false
-//            darkmode.isChecked = false
-//            defaultmode.isChecked = true
-//            themeState(themState = sharedpref.getThemState("Theme"))
-//        }
-//        darkmode.setOnClickListener {
-//            darkmode.isChecked = true
-//            lightmode.isChecked = false
-//            defaultmode.isChecked = false
-//            themValue =0
-//
-//        }
-//
-//        lightmode.setOnClickListener {
-//            darkmode.isChecked = false
-//            lightmode.isChecked = true
-//            defaultmode.isChecked = false
-//            themValue =1
-//
-//        }
-//
-//        defaultmode.setOnClickListener {
-//            darkmode.isChecked = false
-//            lightmode.isChecked = false
-//            defaultmode.isChecked = true
-//            themValue =2
-//        }
-//
-//    }
-
     private fun shareItem() {
         val url = "https://play.google.com/store/apps/details?id=com.kachariya.smallbusinessplan"
         val intent = Intent()
@@ -258,26 +209,4 @@ class CategoriesActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = ContextCompat.getColor(this, color)
     }
-
-//    private fun themeState(themState: Int) {
-//        when (themState) {
-//            0 -> {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//                sharedpref.setThemeState("Theme", 0)
-//            }
-//            1 -> {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//                sharedpref.setThemeState("Theme", 1)
-//            }
-//            else -> {
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-//                } else {
-//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-//                }
-//                sharedpref.setThemeState("Theme", 2)
-//
-//            }
-//        }
-//    }
 }

@@ -15,29 +15,31 @@ import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
+import com.example.smallbusinessplan.databinding.FragmentLaunchingYourBusinessBinding
+import com.example.smallbusinessplan.databinding.FragmentManagingYourFinancesBinding
 
 
 class ManagingYourFinancesFragment : Fragment() {
-private lateinit var bannerAd:FrameLayout
+    private lateinit var binding: FragmentManagingYourFinancesBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_managing_your_finances, container, false)
-        bannerAd=view.findViewById(R.id.ManagingBannerAd)
+    ): View {
+        binding = FragmentManagingYourFinancesBinding.inflate(inflater, container, false)
+        val view = binding.root
         return view
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (NetworkUtils.isNetworkAvailable(requireContext())) {
-            bannerAd.visible()
-            bannerAds(requireActivity(), bannerAd, "SMALL_BANNER")
+            binding.ManagingBannerAd.visible()
+            bannerAds(requireActivity(), binding.ManagingBannerAd, "SMALL_BANNER")
         } else {
-            bannerAd.gone()
+            binding.ManagingBannerAd.gone()
         }
-        val btnBack3: Button = view.findViewById(R.id.back)
-        btnBack3.setOnClickListener {
-            val i = Intent(requireContext() , Main::class.java)
+        binding.back.setOnClickListener {
+            val i = Intent(requireContext(), Main::class.java)
             startActivity(i)
         }
     }

@@ -20,31 +20,22 @@ import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
+import com.example.smallbusinessplan.databinding.ActivityDiscountBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class Discount : AppCompatActivity() {
     private lateinit var bannerAd:FrameLayout
     private var MainMenu: Menu? = null
+    private lateinit var binding: ActivityDiscountBinding
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_discount)
+        binding = ActivityDiscountBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title= Html.fromHtml("<small>DISCOUNT</small>")
 
-
-        val normalprice1: EditText = findViewById(R.id.normalprice1)
-        val DiscountPercent: EditText = findViewById(R.id.DiscountPercent)
-        val normalprice2: EditText = findViewById(R.id.normalprice2)
-        val Discount2: EditText = findViewById(R.id.DiscountPercent2)
-
-        val Discounttv: TextView = findViewById(R.id.Discount)
-        val Discount_Price1tv: TextView = findViewById(R.id.Discount_Price2)
-        val Discount_Price2tv: TextView = findViewById(R.id.Discount_Price)
-        val DiscountPercenttv: TextView = findViewById(R.id.DiscountPercent3)
-
-        val Result1: Button = findViewById(R.id.calculate)
-        val Result2: Button = findViewById(R.id.calculate2)
         bannerAd=findViewById(R.id.DiscountBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
@@ -52,43 +43,43 @@ class Discount : AppCompatActivity() {
         } else {
             bannerAd.gone()
         }
-        Result1.setOnClickListener {
-            if (normalprice1.text.toString().isEmpty() || normalprice1.text.toString().isBlank()){
+        binding.calculate.setOnClickListener {
+            if (binding.normalprice1.text.toString().isEmpty() || binding.normalprice1.text.toString().isBlank()){
                 Toast.makeText(this, "Normal Price must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (DiscountPercent.text.toString().isEmpty() || DiscountPercent.text.toString().isBlank()){
+            if (binding.DiscountPercent.text.toString().isEmpty() || binding.DiscountPercent.text.toString().isBlank()){
                 Toast.makeText(this, "Discount % must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val normalprice11 = normalprice1.text.toString().toDouble()
-            val DiscountPercent11 = DiscountPercent.text.toString().toDouble()
+            val normalprice11 = binding.normalprice1.text.toString().toDouble()
+            val DiscountPercent11 = binding.DiscountPercent.text.toString().toDouble()
 
             val Discount = ((normalprice11) * (DiscountPercent11 / 100))
-            Discounttv.text = Discount.toString()
+            binding.Discount.text = Discount.toString()
             val Discprice = ((normalprice11) - (normalprice11 * (DiscountPercent11 / 100)))
-            Discount_Price1tv.text = Discprice.toString()
+            binding.DiscountPrice2.text = Discprice.toString()
 
         }
-        Result2.setOnClickListener {
-            if (normalprice2.text.toString().isEmpty() || normalprice2.text.toString().isBlank()){
+        binding.calculate2.setOnClickListener {
+            if (binding.normalprice2.text.toString().isEmpty() || binding.normalprice2.text.toString().isBlank()){
                 Toast.makeText(this, "Normal Price must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (Discount2.text.toString().isEmpty() || Discount2.text.toString().isBlank()){
+            if (binding.DiscountPercent2.text.toString().isEmpty() || binding.DiscountPercent2.text.toString().isBlank()){
                 Toast.makeText(this, "Discount must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val normalprice22 = normalprice2.text.toString().toDouble()
-            val Discount22 = Discount2.text.toString().toDouble()
+            val normalprice22 = binding.normalprice2.text.toString().toDouble()
+            val Discount22 = binding.DiscountPercent2.text.toString().toDouble()
 
             val Discprice2 = normalprice22 - Discount22
-            Discount_Price2tv.text = Discprice2.toString()
+            binding.DiscountPrice.text = Discprice2.toString()
             val Discount_percent = ((Discount22 / (normalprice22) * 100))
-            DiscountPercenttv.text = Discount_percent.toString()
+            binding.DiscountPercent3.text = Discount_percent.toString()
         }
-        val formulaBtn:Button = findViewById(R.id.formula)
-        formulaBtn.setOnClickListener {
+
+        binding.formula.setOnClickListener {
             val i = Intent(this , FormulasActivity::class.java)
             startActivity(i)
         }

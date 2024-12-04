@@ -22,40 +22,26 @@ import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
 import com.example.smallbusinessplan.Utils.NetworkUtils
+import com.example.smallbusinessplan.databinding.ActivityContractBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class Contract : AppCompatActivity() {
-    private lateinit var bannerAd:FrameLayout
+    private lateinit var bannerAd: FrameLayout
     private lateinit var sharedPref: SharedPref
     private var MainMenu: Menu? = null
+    private lateinit var binding: ActivityContractBinding
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contract)
+        binding = ActivityContractBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title= Html.fromHtml("<small>CONTRACT VALIDITY</small>")
+        supportActionBar?.title = Html.fromHtml("<small>CONTRACT VALIDITY</small>")
 
         sharedPref = SharedPref(this)
-        val yescheck1: RadioButton = findViewById(R.id.yesradio1)
-        val yescheck2: RadioButton = findViewById(R.id.yesradio2)
-        val yescheck3: RadioButton = findViewById(R.id.yesradio3)
-        val yescheck4: RadioButton = findViewById(R.id.yesradio4)
-        val yescheck5: RadioButton = findViewById(R.id.yesradio5)
-        val yescheck6: RadioButton = findViewById(R.id.yesradio6)
-        val yescheck7: RadioButton = findViewById(R.id.yesradio7)
 
-        val nocheck1: RadioButton = findViewById(R.id.noradio1)
-        val nocheck2: RadioButton = findViewById(R.id.noradio2)
-        val nocheck3: RadioButton = findViewById(R.id.noradio3)
-        val nocheck4: RadioButton = findViewById(R.id.noradio4)
-        val nocheck5: RadioButton = findViewById(R.id.noradio5)
-        val nocheck6: RadioButton = findViewById(R.id.noradio6)
-        val nocheck7: RadioButton = findViewById(R.id.noradio7)
-        val Output: TextView = findViewById(R.id.outputofcalculation)
-        val button: Button = findViewById(R.id.btncalculate)
-        val formulaBtn:Button = findViewById(R.id.formula)
-        bannerAd=findViewById(R.id.ContractBannerAd)
+        bannerAd = findViewById(R.id.ContractBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
             bannerAds(this, bannerAd, "SMALL_BANNER")
@@ -63,131 +49,138 @@ class Contract : AppCompatActivity() {
             bannerAd.gone()
         }
 
-        formulaBtn.setOnClickListener {
-            val i = Intent(this , FormulasActivity::class.java)
+        binding.formula.setOnClickListener {
+            val i = Intent(this, FormulasActivity::class.java)
             startActivity(i)
         }
-        Output.setText(sharedPref.getStringValue(AppConstants.RESULT))
+        binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
         if (sharedPref.getStringValue(AppConstants.SERVICE) == AppConstants.YES) {
-            yescheck1.isChecked = true
-            nocheck1.isChecked = false
+            binding.yesradio1.isChecked = true
+            binding.noradio1.isChecked = false
         } else {
-            yescheck1.isChecked = false
-            nocheck1.isChecked = true
+            binding.yesradio1.isChecked = false
+            binding.noradio1.isChecked = true
         }
-        yescheck1.setOnClickListener {
+        binding.yesradio1.setOnClickListener {
             sharedPref.setStringValue(AppConstants.SERVICE, AppConstants.YES)
         }
-        nocheck1.setOnClickListener {
+        binding.noradio1.setOnClickListener {
             sharedPref.setStringValue(AppConstants.SERVICE, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.AWFULL) == AppConstants.YES) {
-            yescheck2.isChecked = true
-            nocheck2.isChecked = false
+            binding.yesradio2.isChecked = true
+            binding.noradio2.isChecked = false
         } else {
-            yescheck2.isChecked = false
-            nocheck2.isChecked = true
+            binding.yesradio2.isChecked = false
+            binding.noradio2.isChecked = true
         }
-        yescheck2.setOnClickListener {
+        binding.yesradio2.setOnClickListener {
             sharedPref.setStringValue(AppConstants.AWFULL, AppConstants.YES)
         }
-        nocheck2.setOnClickListener {
+        binding.noradio2.setOnClickListener {
             sharedPref.setStringValue(AppConstants.AWFULL, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.COMPANY) == AppConstants.YES) {
-            yescheck3.isChecked = true
-            nocheck3.isChecked = false
+            binding.yesradio3.isChecked = true
+            binding.noradio3.isChecked = false
         } else {
-            yescheck3.isChecked = false
-            nocheck3.isChecked = true
+            binding.yesradio3.isChecked = false
+            binding.noradio3.isChecked = true
         }
-        yescheck3.setOnClickListener {
+        binding.yesradio3.setOnClickListener {
             sharedPref.setStringValue(AppConstants.COMPANY, AppConstants.YES)
         }
-        nocheck3.setOnClickListener {
+        binding.noradio3.setOnClickListener {
             sharedPref.setStringValue(AppConstants.COMPANY, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.OFFERED) == AppConstants.YES) {
-            yescheck4.isChecked = true
-            nocheck4.isChecked = false
+            binding.yesradio4.isChecked = true
+            binding.noradio4.isChecked = false
         } else {
-            yescheck4.isChecked = false
-            nocheck4.isChecked = true
+            binding.yesradio4.isChecked = false
+            binding.noradio4.isChecked = true
         }
-        yescheck4.setOnClickListener {
+        binding.yesradio4.setOnClickListener {
             sharedPref.setStringValue(AppConstants.OFFERED, AppConstants.YES)
         }
-        nocheck4.setOnClickListener {
+        binding.noradio4.setOnClickListener {
             sharedPref.setStringValue(AppConstants.OFFERED, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.FRIENDS) == AppConstants.YES) {
-            yescheck5.isChecked = true
-            nocheck5.isChecked = false
+            binding.yesradio5.isChecked = true
+            binding.noradio5.isChecked = false
         } else {
-            yescheck5.isChecked = false
-            nocheck5.isChecked = true
+            binding.yesradio5.isChecked = false
+            binding.noradio5.isChecked = true
         }
-        yescheck5.setOnClickListener {
+        binding.yesradio5.setOnClickListener {
             sharedPref.setStringValue(AppConstants.FRIENDS, AppConstants.YES)
         }
-        nocheck5.setOnClickListener {
+        binding.noradio5.setOnClickListener {
             sharedPref.setStringValue(AppConstants.FRIENDS, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.AGREEMENT) == AppConstants.YES) {
-            yescheck6.isChecked = true
-            nocheck6.isChecked = false
+            binding.yesradio6.isChecked = true
+            binding.noradio6.isChecked = false
         } else {
-            yescheck6.isChecked = false
-            nocheck6.isChecked = true
+            binding.yesradio6.isChecked = false
+            binding.noradio6.isChecked = true
         }
-        yescheck6.setOnClickListener {
+        binding.yesradio6.setOnClickListener {
             sharedPref.setStringValue(AppConstants.AGREEMENT, AppConstants.YES)
         }
-        nocheck6.setOnClickListener {
+        binding.noradio6.setOnClickListener {
             sharedPref.setStringValue(AppConstants.AGREEMENT, AppConstants.NO)
         }
 
         if (sharedPref.getStringValue(AppConstants.DURATION) == AppConstants.YES) {
-            yescheck7.isChecked = true
-            nocheck7.isChecked = false
+            binding.yesradio7.isChecked = true
+            binding.noradio7.isChecked = false
         } else {
-            yescheck7.isChecked = false
-            nocheck7.isChecked = true
+            binding.yesradio7.isChecked = false
+            binding.noradio7.isChecked = true
         }
-        yescheck7.setOnClickListener {
+        binding.yesradio7.setOnClickListener {
             sharedPref.setStringValue(AppConstants.DURATION, AppConstants.YES)
         }
-        nocheck7.setOnClickListener {
+        binding.noradio7.setOnClickListener {
             sharedPref.setStringValue(AppConstants.DURATION, AppConstants.NO)
         }
 
-        button.setOnClickListener {
-            if (yescheck1.isChecked && yescheck2.isChecked && yescheck3.isChecked && yescheck4.isChecked && yescheck6.isChecked && yescheck5.isChecked && yescheck7.isChecked) {
-                sharedPref.setStringValue(AppConstants.RESULT, "Probably a VALID Contract, but may be hard to enforce")
-                Output.setText(sharedPref.getStringValue(AppConstants.RESULT))
-                Output.setTextColor(Color.GRAY)
-            } else if (yescheck1.isChecked && yescheck2.isChecked && yescheck3.isChecked && yescheck4.isChecked && yescheck6.isChecked && yescheck5.isChecked || nocheck5.isChecked && yescheck7.isChecked || nocheck5.isChecked) {
-                sharedPref.setStringValue(AppConstants.RESULT, "Probably a VALID Contract that is enforceable")
-                Output.setText(sharedPref.getStringValue(AppConstants.RESULT))
-                Output.setTextColor(Color.GRAY)
+        binding.btncalculate.setOnClickListener {
+            if (binding.yesradio1.isChecked && binding.yesradio2.isChecked && binding.yesradio3.isChecked && binding.yesradio4.isChecked && binding.yesradio6.isChecked && binding.yesradio5.isChecked && binding.yesradio7.isChecked) {
+                sharedPref.setStringValue(
+                    AppConstants.RESULT,
+                    "Probably a VALID Contract, but may be hard to enforce"
+                )
+                binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
+                binding.outputofcalculation.setTextColor(Color.GRAY)
+            } else if (binding.yesradio1.isChecked && binding.yesradio2.isChecked && binding.yesradio3.isChecked && binding.yesradio4.isChecked && binding.yesradio5.isChecked && binding.yesradio5.isChecked || binding.noradio5.isChecked && binding.yesradio7.isChecked || binding.noradio5.isChecked) {
+                sharedPref.setStringValue(
+                    AppConstants.RESULT,
+                    "Probably a VALID Contract that is enforceable"
+                )
+                binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
+                binding.outputofcalculation.setTextColor(Color.GRAY)
             } else {
                 sharedPref.setStringValue(AppConstants.RESULT, "Probably INVALID contract")
-                Output.setText(sharedPref.getStringValue(AppConstants.RESULT))
-                Output.setTextColor(Color.RED)
+                binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
+                binding.outputofcalculation.setTextColor(Color.RED)
             }
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home){
-            val i = Intent(this , Calculator::class.java)
+        if (item.itemId == android.R.id.home) {
+            val i = Intent(this, Calculator::class.java)
             startActivity(i)
         }
-        if (item.itemId == R.id.ReviewsAction){
+        if (item.itemId == R.id.ReviewsAction) {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -200,25 +193,28 @@ class Contract : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    fun showBottomSheetDialog(){
+
+    fun showBottomSheetDialog() {
 
         val bottomSheetDialog = BottomSheetDialog(this)
-        val  viewLayout= LayoutInflater.from(this).inflate(R.layout.bottom_sheet,null)
+        val viewLayout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet, null)
         bottomSheetDialog.setContentView(viewLayout)
         bottomSheetDialog.show()
-        val close:TextView = viewLayout.findViewById(R.id.close_bottom_sheet)
+        val close: TextView = viewLayout.findViewById(R.id.close_bottom_sheet)
         close.setOnClickListener {
             bottomSheetDialog.dismiss()
         }
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         MainMenu = menu
         menuInflater.inflate(R.menu.calculator_activities_items, menu)
         return super.onCreateOptionsMenu(menu)
 
     }
+
     override fun onBackPressed() {
-        val intent = Intent(this , Calculator::class.java)
+        val intent = Intent(this, Calculator::class.java)
         startActivity(intent)
     }
 }

@@ -5,43 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.MenuItem
-import android.widget.TextView
 import com.example.smallbusinessplan.Extensions.Calculator
-import com.example.smallbusinessplan.R
+import com.example.smallbusinessplan.databinding.ActivityFormulasBinding
 
 class FormulasActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityFormulasBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_formulas)
+        binding = ActivityFormulasBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title="Formulas"
+        supportActionBar?.title = "Formulas"
 
-        val  Cash:TextView = findViewById(R.id.tv2)
-        Cash.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Forcast:TextView = findViewById(R.id.tv10)
-        Forcast.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Loan:TextView = findViewById(R.id.tv12)
-        Loan.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Margin:TextView = findViewById(R.id.tv14)
-        Margin.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Markup:TextView = findViewById(R.id.tv18)
-        Markup.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Profit:TextView = findViewById(R.id.tv20)
-        Profit.movementMethod = LinkMovementMethod.getInstance()
-
-        val  VatFromNetPrice:TextView = findViewById(R.id.tv24)
-        VatFromNetPrice.movementMethod = LinkMovementMethod.getInstance()
-
-        val  VatFromGrossPrice:TextView = findViewById(R.id.tv26)
-        VatFromGrossPrice.movementMethod = LinkMovementMethod.getInstance()
-
-        val  Sales:TextView = findViewById(R.id.tv22)
-        Sales.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv2.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv10.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv12.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv14.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv18.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv20.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv24.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv26.movementMethod = LinkMovementMethod.getInstance()
+        binding.tv22.movementMethod = LinkMovementMethod.getInstance()
     }
 
 
@@ -52,8 +37,9 @@ class FormulasActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
     override fun onBackPressed() {
-        val intent = Intent(this , Calculator::class.java)
+        val intent = Intent(this, Calculator::class.java)
         startActivity(intent)
     }
 }

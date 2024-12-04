@@ -22,47 +22,46 @@ import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.Utils.NetworkUtils
 import com.example.smallbusinessplan.Utils.NetworkUtils.isNetworkAvailable
+import com.example.smallbusinessplan.databinding.ActivityGetStartedBinding
 import java.util.concurrent.TimeUnit
 
 
 class GetStarted : AppCompatActivity() {
-    private lateinit var button:Button
-    private lateinit var progressBar:ProgressBar
-    private lateinit var bannerAd:FrameLayout
-    private lateinit var countDownTimer:CountDownTimer
+    private lateinit var bannerAd: FrameLayout
+    private lateinit var countDownTimer: CountDownTimer
+    private lateinit var binding: ActivityGetStartedBinding
 
     @SuppressLint("ResourceAsColor")
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_get_started)
-
+        binding = ActivityGetStartedBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.hide()
-        button=findViewById(R.id.button)
-        progressBar=findViewById(R.id.progressBar)
-        bannerAd=findViewById(R.id.bannerad_getStarted)
-        button.setOnClickListener {
-            val intent = Intent(this , Main::class.java)
+        bannerAd = findViewById(R.id.bannerad_getStarted)
+        binding.button.setOnClickListener {
+            val intent = Intent(this, Main::class.java)
             startActivity(intent)
         }
-        button.gone()
-        progressBar.visible()
-        countDownTimer=object : CountDownTimer(TimeUnit.SECONDS.toMillis(5), TimeUnit.SECONDS.toMillis(1)){
-            override fun onFinish() {
-                button.visible()
-                progressBar.gone()
-                if (isNetworkAvailable(this@GetStarted)) {
-                    bannerAd.visible()
-                    bannerAds(this@GetStarted, bannerAd, "FULL_BANNER")
-                } else {
-                    bannerAd.gone()
+        binding.button.gone()
+        binding.progressBar.visible()
+        countDownTimer =
+            object : CountDownTimer(TimeUnit.SECONDS.toMillis(5), TimeUnit.SECONDS.toMillis(1)) {
+                override fun onFinish() {
+                    binding.button.visible()
+                    binding.progressBar.gone()
+                    if (isNetworkAvailable(this@GetStarted)) {
+                        bannerAd.visible()
+                        bannerAds(this@GetStarted, bannerAd, "FULL_BANNER")
+                    } else {
+                        bannerAd.gone()
+                    }
+                }
+
+                override fun onTick(p0: Long) {
+                    Log.d("Tag", "Counter:$p0")
                 }
             }
-
-            override fun onTick(p0: Long) {
-                Log.d("Tag","Counter:$p0")
-            }
-        }
         countDownTimer.start()
     }
 }

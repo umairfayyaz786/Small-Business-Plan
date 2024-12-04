@@ -21,28 +21,24 @@ import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
+import com.example.smallbusinessplan.databinding.ActivityBreakEvenBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class BreakEven : AppCompatActivity() {
     private lateinit var bannerAd: FrameLayout
     private var MainMenu: Menu? = null
+    private lateinit var binding:ActivityBreakEvenBinding
 
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_break_even)
+        binding = ActivityBreakEvenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = Html.fromHtml("<small>BREAKEVEN</small>")
 
-        val sales: EditText = findViewById(R.id.sale)
-        val sales_cost: EditText = findViewById(R.id.Cost_of_sale)
-        val Expenses: EditText = findViewById(R.id.Expenses)
-        val depreciation: EditText = findViewById(R.id.depreciation)
-        val Result: Button = findViewById(R.id.calculate)
-        val Breakevensales_result: TextView = findViewById(R.id.Breakevensales_result)
-        val Breakevensalespercent_result: TextView = findViewById(R.id.Breakevensalespercent_result)
-        val Breakevendays_result: TextView = findViewById(R.id.Breakevendays_result)
+
         bannerAd = findViewById(R.id.BreakEvenBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
@@ -51,28 +47,28 @@ class BreakEven : AppCompatActivity() {
             bannerAd.gone()
         }
 
-        Result.setOnClickListener {
-            if (sales.text.toString().isEmpty() || sales.text.toString().isBlank()) {
+        binding.calculate.setOnClickListener {
+            if (binding.sale.text.toString().isEmpty() || binding.sale.text.toString().isBlank()) {
                 Toast.makeText(this, "Sales must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (sales_cost.text.toString().isEmpty() || sales_cost.text.toString().isBlank()) {
+            if (binding.CostOfSale.text.toString().isEmpty() || binding.CostOfSale.text.toString().isBlank()) {
                 Toast.makeText(this, "Cost of Sales must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (Expenses.text.toString().isEmpty() || Expenses.text.toString().isBlank()) {
+            if (binding.Expenses.text.toString().isEmpty() || binding.Expenses.text.toString().isBlank()) {
                 Toast.makeText(this, "Expenses must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (depreciation.text.toString().isEmpty() || depreciation.text.toString().isBlank()) {
+            if (binding.depreciation.text.toString().isEmpty() || binding.depreciation.text.toString().isBlank()) {
                 Toast.makeText(this, "Depreciation must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val ssales = sales.text.toString().toDouble()
-            val sales_costt = sales_cost.text.toString().toDouble()
-            val Expensess = Expenses.text.toString().toDouble()
-            val depreciationn = depreciation.text.toString().toDouble()
+            val ssales = binding.sale.text.toString().toDouble()
+            val sales_costt = binding.CostOfSale.text.toString().toDouble()
+            val Expensess = binding.Expenses.text.toString().toDouble()
+            val depreciationn = binding.depreciation.text.toString().toDouble()
 
             val Total_Expenses = Expensess + depreciationn
 
@@ -80,15 +76,15 @@ class BreakEven : AppCompatActivity() {
             val Gross_profit_Percentage = (Gross_profit / ssales) * 100
 
             val BreakEven_Sales = (Total_Expenses / (Gross_profit_Percentage / 100))
-            Breakevensales_result.text = BreakEven_Sales.toString()
+            binding.BreakevensalesResult.text = BreakEven_Sales.toString()
 
             val BreakEven_Sales_Percent = ((BreakEven_Sales / ssales) * 100)
-            Breakevensalespercent_result.text = BreakEven_Sales_Percent.toString()
+            binding.BreakevensalespercentResult.text = BreakEven_Sales_Percent.toString()
             val BreakEven_Days = (BreakEven_Sales / (ssales / 365))
-            Breakevendays_result.text = BreakEven_Days.toString()
+            binding.BreakevendaysResult.text = BreakEven_Days.toString()
         }
-        val formulaBtn: Button = findViewById(R.id.formula)
-        formulaBtn.setOnClickListener {
+
+        binding.formula.setOnClickListener {
             val i = Intent(this, FormulasActivity::class.java)
             startActivity(i)
         }

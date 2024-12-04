@@ -99,32 +99,6 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".Activities.LaunchingYourBusiness"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Activities.MarketingYourBusiness"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Activities.CoveringTheLegalSide"
-            android:exported="false"
-            android:theme="@style/Theme.SmallBusinessPlan"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Activities.ManaginYourFinances"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Activities.WritingAbusinessPlan"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Activities.SettingOutTheBasics"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
-
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"/>

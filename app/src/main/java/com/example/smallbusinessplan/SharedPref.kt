@@ -29,26 +29,10 @@ class SharedPref(context: Context) {
         return stringValue
     }
 
-    fun setContract(key: String, value: Boolean) {
-        if (!TextUtils.isEmpty(key)) {
-            val editor: SharedPreferences.Editor = mysharedpref.edit()
-            editor.putBoolean(key, value)
-            editor.apply()
-        }
-    }
-
-    fun getContract(key: String): Boolean {
-        var value: Boolean = false
-        if (!TextUtils.isEmpty(key)) {
-            value = mysharedpref.getBoolean(key, false)
-        }
-        return value
-    }
-
     fun setIntegerValue(key: String, value: Double) {
         if (!TextUtils.isEmpty(key)) {
             val editor: SharedPreferences.Editor = mysharedpref.edit()
-            editor.putFloat(key , value.toFloat())
+            editor.putFloat(key, value.toFloat())
 //            editor.putInt(key, value.toInt())
             editor.apply()
         }

@@ -66,30 +66,30 @@ class MainActivity : AppCompatActivity() {
         txtlaunching1 = findViewById(R.id.launching)
         bannerad = findViewById(R.id.bannerad)
 
-        txtsetting1.setOnClickListener {
-            val intent = Intent(this, SettingOutTheBasics::class.java)
-            startActivity(intent)
-        }
-        txtbusinessplan1.setOnClickListener {
-            val intent = Intent(this, WritingAbusinessPlan::class.java)
-            startActivity(intent)
-        }
-        txtfinances1.setOnClickListener {
-            val intent = Intent(this, ManaginYourFinances::class.java)
-            startActivity(intent)
-        }
-        txtlegalside1.setOnClickListener {
-            val intent = Intent(this, CoveringTheLegalSide::class.java)
-            startActivity(intent)
-        }
-        txtmarketing1.setOnClickListener {
-            val intent = Intent(this, MarketingYourBusiness::class.java)
-            startActivity(intent)
-        }
-        txtlaunching1.setOnClickListener {
-            val intent = Intent(this, LaunchingYourBusiness::class.java)
-            startActivity(intent)
-        }
+//        txtsetting1.setOnClickListener {
+//            val intent = Intent(this, SettingOutTheBasics::class.java)
+//            startActivity(intent)
+//        }
+//        txtbusinessplan1.setOnClickListener {
+//            val intent = Intent(this, WritingAbusinessPlan::class.java)
+//            startActivity(intent)
+//        }
+//        txtfinances1.setOnClickListener {
+//            val intent = Intent(this, ManaginYourFinances::class.java)
+//            startActivity(intent)
+//        }
+//        txtlegalside1.setOnClickListener {
+//            val intent = Intent(this, CoveringTheLegalSide::class.java)
+//            startActivity(intent)
+//        }
+//        txtmarketing1.setOnClickListener {
+//            val intent = Intent(this, MarketingYourBusiness::class.java)
+//            startActivity(intent)
+//        }
+//        txtlaunching1.setOnClickListener {
+//            val intent = Intent(this, LaunchingYourBusiness::class.java)
+//            startActivity(intent)
+//        }
 
         toggle = ActionBarDrawerToggle(this, drawyerLayout, R.string.open, R.string.close)
         drawyerLayout.addDrawerListener(toggle)

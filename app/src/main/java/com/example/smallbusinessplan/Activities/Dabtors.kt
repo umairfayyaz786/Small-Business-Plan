@@ -20,22 +20,23 @@ import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
+import com.example.smallbusinessplan.databinding.ActivityDabtorsBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class Dabtors : AppCompatActivity() {
     private lateinit var bannerAd:FrameLayout
     private var MainMenu: Menu? = null
+    private lateinit var binding:ActivityDabtorsBinding
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dabtors)
+        binding = ActivityDabtorsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title= Html.fromHtml("<small>DEBTOR</small>")
 
-        val sales: EditText = findViewById(R.id.sales)
-        val days: EditText = findViewById(R.id.days)
-        val Result: Button = findViewById(R.id.calculate)
-        val Output: TextView = findViewById(R.id.Debtors_result)
+
         bannerAd=findViewById(R.id.DebtorsBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
@@ -44,22 +45,21 @@ class Dabtors : AppCompatActivity() {
             bannerAd.gone()
         }
 
-        Result.setOnClickListener {
-            if (sales.text.toString().isEmpty() || sales.text.toString().isBlank()){
+        binding.calculate.setOnClickListener {
+            if (binding.sales.text.toString().isEmpty() || binding.sales.text.toString().isBlank()){
                 Toast.makeText(this, "Sales must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (days.text.toString().isEmpty() || days.text.toString().isBlank()){
+            if (binding.days.text.toString().isEmpty() || binding.days.text.toString().isBlank()){
                 Toast.makeText(this, "Customer Days Credit must be required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val Cost_of_sales_per_year = sales.text.toString().toDouble()
-            val Days_credit = days.text.toString().toDouble()
+            val Cost_of_sales_per_year = binding.sales.text.toString().toDouble()
+            val Days_credit = binding.days.text.toString().toDouble()
             val Debtors =  (((Cost_of_sales_per_year)/365)*Days_credit)*-1
-            Output.text = Debtors.toString()
+            binding.DebtorsResult.text = Debtors.toString()
         }
-        val formulaBtn:Button = findViewById(R.id.formula)
-        formulaBtn.setOnClickListener {
+        binding.formula.setOnClickListener {
             val i = Intent(this , FormulasActivity::class.java)
             startActivity(i)
         }

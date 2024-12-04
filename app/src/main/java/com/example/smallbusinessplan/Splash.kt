@@ -18,21 +18,23 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_splash)
-        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_VISIBLE or View.SYSTEM_UI_FLAG_FULLSCREEN)
-        window.statusBarColor=Color.TRANSPARENT
+        window?.decorView?.systemUiVisibility =
+            (View.SYSTEM_UI_FLAG_VISIBLE or View.SYSTEM_UI_FLAG_FULLSCREEN)
+        window.statusBarColor = Color.TRANSPARENT
         Handler(Looper.myLooper()!!).postDelayed({
-            startNewActivity( GetStarted::class.java,true,null)
+            startNewActivity(GetStarted::class.java, true, null)
 
         }, TimeUnit.SECONDS.toMillis(5))
 
     }
-    private fun startNewActivity(className:Class<*>, closed:Boolean,bundle: Bundle?){
-        val intent = Intent(this,className)
+
+    private fun startNewActivity(className: Class<*>, closed: Boolean, bundle: Bundle?) {
+        val intent = Intent(this, className)
         bundle?.let {
             intent.putExtras(it)
         }
         startActivity(intent)
-        if (closed){
+        if (closed) {
             finish()
         }
 
