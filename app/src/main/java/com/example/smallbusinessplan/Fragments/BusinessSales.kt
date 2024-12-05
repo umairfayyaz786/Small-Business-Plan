@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.smallbusinessplan.Activities.FormulasActivity
+import com.example.smallbusinessplan.Extensions.FragmentIntent
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.databinding.FragmentBusinessSalesBinding
 
@@ -109,8 +110,7 @@ class BusinessSales : Fragment() {
         }
 
         binding.formula.setOnClickListener {
-            val i = Intent(context, FormulasActivity::class.java)
-            startActivity(i)
+            FragmentIntent(FormulasActivity::class)
         }
         // Inflate the layout for this fragment
         return view

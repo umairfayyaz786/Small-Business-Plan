@@ -10,16 +10,15 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.RadioButton
 import android.widget.TextView
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
 import com.example.smallbusinessplan.Utils.NetworkUtils
 import com.example.smallbusinessplan.databinding.ActivityContractBinding
@@ -37,21 +36,20 @@ class Contract : AppCompatActivity() {
         binding = ActivityContractBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = Html.fromHtml("<small>CONTRACT VALIDITY</small>")
+        supportActionBar?.title = Html.fromHtml(getString(R.string.small_contract_validity_small))
 
         sharedPref = SharedPref(this)
 
         bannerAd = findViewById(R.id.ContractBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            bannerAds(this, bannerAd, getString(R.string.small_banner))
         } else {
             bannerAd.gone()
         }
 
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
         binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
         if (sharedPref.getStringValue(AppConstants.SERVICE) == AppConstants.YES) {
@@ -156,19 +154,20 @@ class Contract : AppCompatActivity() {
             if (binding.yesradio1.isChecked && binding.yesradio2.isChecked && binding.yesradio3.isChecked && binding.yesradio4.isChecked && binding.yesradio6.isChecked && binding.yesradio5.isChecked && binding.yesradio7.isChecked) {
                 sharedPref.setStringValue(
                     AppConstants.RESULT,
-                    "Probably a VALID Contract, but may be hard to enforce"
+                    getString(R.string.probably_a_valid_contract_but_may_be_hard_to_enforce)
                 )
                 binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
                 binding.outputofcalculation.setTextColor(Color.GRAY)
             } else if (binding.yesradio1.isChecked && binding.yesradio2.isChecked && binding.yesradio3.isChecked && binding.yesradio4.isChecked && binding.yesradio5.isChecked && binding.yesradio5.isChecked || binding.noradio5.isChecked && binding.yesradio7.isChecked || binding.noradio5.isChecked) {
                 sharedPref.setStringValue(
                     AppConstants.RESULT,
-                    "Probably a VALID Contract that is enforceable"
+                    getString(R.string.probably_a_valid_contract_that_is_enforceable)
                 )
                 binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
                 binding.outputofcalculation.setTextColor(Color.GRAY)
             } else {
-                sharedPref.setStringValue(AppConstants.RESULT, "Probably INVALID contract")
+                sharedPref.setStringValue(AppConstants.RESULT,
+                    getString(R.string.probably_invalid_contract))
                 binding.outputofcalculation.setText(sharedPref.getStringValue(AppConstants.RESULT))
                 binding.outputofcalculation.setTextColor(Color.RED)
             }
@@ -177,8 +176,7 @@ class Contract : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(
@@ -214,7 +212,6 @@ class Contract : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

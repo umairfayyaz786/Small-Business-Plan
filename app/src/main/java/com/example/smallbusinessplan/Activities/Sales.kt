@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
@@ -35,11 +36,11 @@ class Sales : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding = ActivitySalesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = Html.fromHtml("<small>SALES FUNNEL</small>")
+        supportActionBar?.title = Html.fromHtml(getString(R.string.small_sales_funnel_small))
         bannerAd = findViewById(R.id.SalesBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            bannerAds(this, bannerAd, getString(R.string.small_banner))
         } else {
             bannerAd.gone()
         }
@@ -92,8 +93,7 @@ class Sales : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(
@@ -129,7 +129,6 @@ class Sales : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

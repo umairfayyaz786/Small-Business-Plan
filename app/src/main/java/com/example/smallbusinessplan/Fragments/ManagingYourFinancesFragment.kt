@@ -10,7 +10,9 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Activities.FormulasActivity
 import com.example.smallbusinessplan.Activities.Main
+import com.example.smallbusinessplan.Extensions.FragmentIntent
 import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
@@ -39,8 +41,7 @@ class ManagingYourFinancesFragment : Fragment() {
             binding.ManagingBannerAd.gone()
         }
         binding.back.setOnClickListener {
-            val i = Intent(requireContext(), Main::class.java)
-            startActivity(i)
+            FragmentIntent(Main::class)
         }
     }
 }

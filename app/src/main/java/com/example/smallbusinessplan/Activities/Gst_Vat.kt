@@ -9,17 +9,17 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
+import com.example.smallbusinessplan.Extensions.showToast
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
 import com.example.smallbusinessplan.Utils.NetworkUtils
 import com.example.smallbusinessplan.databinding.ActivityGstVatBinding
@@ -37,13 +37,13 @@ class Gst_Vat : AppCompatActivity() {
         binding = ActivityGstVatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = Html.fromHtml("<small>GST/VAT</small>")
+        supportActionBar?.title = Html.fromHtml(getString(R.string.small_gst_vat_small))
         sharedPref = SharedPref(this)
 
         bannerAd = findViewById(R.id.GstBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            bannerAds(this, bannerAd, getString(R.string.small_gross_profit_small))
         } else {
             bannerAd.gone()
         }
@@ -54,11 +54,11 @@ class Gst_Vat : AppCompatActivity() {
             if (binding.salesNetPrice.text.toString()
                     .isEmpty() || binding.salesNetPrice.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Sales Net Price must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.sales_net_price_must_be_required))
                 return@setOnClickListener
             }
             if (binding.tax1.text.toString().isEmpty() || binding.tax1.text.toString().isBlank()) {
-                Toast.makeText(this, "GST/VST % must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.gst_vst_percent_must_be_required))
                 return@setOnClickListener
             }
 
@@ -77,14 +77,13 @@ class Gst_Vat : AppCompatActivity() {
             if (binding.salesGrossProfit.text.toString()
                     .isEmpty() || binding.salesGrossProfit.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Sales Gross Price must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                showToast(getString(R.string.sales_gross_price_must_be_required))
                 return@setOnClickListener
             }
             if (binding.taxPercent.text.toString().isEmpty() || binding.taxPercent.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "GST/VST % must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.gst_vst_percent_must_be_required))
                 return@setOnClickListener
             }
             val sales_gross_profitt = binding.salesGrossProfit.text.toString().toDouble()
@@ -99,15 +98,13 @@ class Gst_Vat : AppCompatActivity() {
             binding.salesnetpriceResult.text = salesnetprice.toString()
         }
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(

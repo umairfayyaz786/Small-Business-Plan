@@ -1,35 +1,27 @@
 package com.example.smallbusinessplan.Activities
 
-import android.annotation.SuppressLint
-import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Fragments.*
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.databinding.ActivityCategoriesBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
@@ -56,12 +48,17 @@ class CategoriesActivity : AppCompatActivity() {
         val tabs = findViewById<TabLayout>(R.id.tabs)
 
         val adaptor = Main.MyViewPagerAdaptor(supportFragmentManager)
-        adaptor.addfragment(SettingOutBasicsFragment(), "Setting Out Basics")
-        adaptor.addfragment(WritingaBusinessPlanFragment(), "Writing a Business Plan")
-        adaptor.addfragment(ManagingYourFinancesFragment(), "Managing Your Finances")
-        adaptor.addfragment(CoveringTheLegalSideFragment(), "Covering the Legal Side")
-        adaptor.addfragment(MarketingYourBusinessFragment(), "Marketing Your Business")
-        adaptor.addfragment(LaunchingYourBusinessFragment(), "Launching Your Business")
+        adaptor.addfragment(SettingOutBasicsFragment(), getString(R.string.setting_out_basics))
+        adaptor.addfragment(WritingaBusinessPlanFragment(),
+            getString(R.string.writing_a_business_plan))
+        adaptor.addfragment(ManagingYourFinancesFragment(),
+            getString(R.string.managing_your_finances))
+        adaptor.addfragment(CoveringTheLegalSideFragment(),
+            getString(R.string.covering_the_legal_side))
+        adaptor.addfragment(MarketingYourBusinessFragment(),
+            getString(R.string.marketing_your_business))
+        adaptor.addfragment(LaunchingYourBusinessFragment(),
+            getString(R.string.launching_your_business))
 
         pager.adapter = adaptor
         tabs.setupWithViewPager(pager)
@@ -89,8 +86,7 @@ class CategoriesActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
-                    val intent = Intent(this, Main::class.java)
-                    startActivity(intent)
+                    ActivityIntent(Main::class)
                 }
 
                 R.id.sharemenu -> {
@@ -139,8 +135,7 @@ class CategoriesActivity : AppCompatActivity() {
 
 
     private fun calculator() {
-        val i = Intent(this, Calculator::class.java)
-        startActivity(i)
+        ActivityIntent(Calculator::class)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -162,7 +157,6 @@ class CategoriesActivity : AppCompatActivity() {
             reviews()
         }
         if (item.itemId == R.id.mode1) {
-//            Mode()
             Main.Mode(this)
         }
         if (item.itemId == R.id.share) {

@@ -24,7 +24,7 @@ lateinit var binding: ActivityCalculatorBinding
 
 class Calculator : AppCompatActivity() {
     private var MainMenu: Menu? = null
-    private lateinit var bannerAd:FrameLayout
+    private lateinit var bannerAd: FrameLayout
 
     companion object {
         var buttonState: Boolean = false
@@ -39,8 +39,6 @@ class Calculator : AppCompatActivity() {
         if (NetworkUtils.isNetworkAvailable(this)) {
             interstitialAds(this)
         }
-
-//        supportActionBar?.title="BUSINESS CALCULATOR"
         supportActionBar?.title = Html.fromHtml("<small>BUSINESS CALCULATOR</small>")
         if (buttonState) {
             binding.fram1.visibility = View.GONE
@@ -60,56 +58,43 @@ class Calculator : AppCompatActivity() {
             buttonState = false
         }
         binding.br.setOnClickListener {
-            val i = Intent(this, BreakEven::class.java)
-            startActivity(i)
+            ActivityIntent(BreakEven::class)
         }
         binding.Sales.setOnClickListener {
-            val i = Intent(this, Sales::class.java)
-            startActivity(i)
+            ActivityIntent(Sales::class)
         }
         binding.cas.setOnClickListener {
-            val i = Intent(this, Cash::class.java)
-            startActivity(i)
+            ActivityIntent(Cash::class)
         }
         binding.cont.setOnClickListener {
-            val i = Intent(this, Contract::class.java)
-            startActivity(i)
+            ActivityIntent(Contract::class)
         }
         binding.credit.setOnClickListener {
-            val i = Intent(this, Creditor::class.java)
-            startActivity(i)
+            ActivityIntent(Creditor::class)
         }
         binding.Debtor.setOnClickListener {
-            val i = Intent(this, Dabtors::class.java)
-            startActivity(i)
+            ActivityIntent(Dabtors::class)
         }
         binding.Disc.setOnClickListener {
-            val i = Intent(this, Discount::class.java)
-            startActivity(i)
+            ActivityIntent(Discount::class)
         }
         binding.contract.setOnClickListener {
-            val i = Intent(this, Gross_profit::class.java)
-            startActivity(i)
+            ActivityIntent(Gross_profit::class)
         }
         binding.margin.setOnClickListener {
-            val i = Intent(this, Margin::class.java)
-            startActivity(i)
+            ActivityIntent(Margin::class)
         }
         binding.Market.setOnClickListener {
-            val i = Intent(this, Market::class.java)
-            startActivity(i)
+            ActivityIntent(Market::class)
         }
         binding.Markup.setOnClickListener {
-            val i = Intent(this, Markup::class.java)
-            startActivity(i)
+            ActivityIntent(Markup::class)
         }
         binding.Netprofit.setOnClickListener {
-            val i = Intent(this, NetProfit::class.java)
-            startActivity(i)
+            ActivityIntent(NetProfit::class)
         }
         binding.Gst.setOnClickListener {
-            val i = Intent(this, Gst_Vat::class.java)
-            startActivity(i)
+            ActivityIntent(Gst_Vat::class)
         }
         binding.button.setOnClickListener {
             binding.editTextTextPersonName2.setText("")
@@ -146,71 +131,96 @@ class Calculator : AppCompatActivity() {
             binding.editTextTextPersonName2.append("0")
         }
         binding.button19.setOnClickListener {
-            try{
-                val lastIndex = binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
-                val lastChar = binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
-                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo('+') == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)) {
+            try {
+                val lastIndex =
+                    binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
+                val lastChar =
+                    binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
+                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo(
+                        '+'
+                    ) == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)
+                ) {
                     Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
                 } else {
                     binding.editTextTextPersonName2.append(".")
                 }
-            }catch (e:Exception){
+            } catch (e: Exception) {
                 e.printStackTrace()
             }
 
         }
         binding.button22.setOnClickListener {
-            try{
-                val lastIndex = binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
-                val lastChar = binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
-                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo('+') == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)) {
+            try {
+                val lastIndex =
+                    binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
+                val lastChar =
+                    binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
+                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo(
+                        '+'
+                    ) == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)
+                ) {
                     Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
                 } else {
                     binding.editTextTextPersonName2.append("/")
                 }
-            }catch (e:Exception){
+            } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
         binding.button13.setOnClickListener {
-            try{
-                val lastIndex = binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
-                val lastChar = binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
-                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo('+') == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)) {
+            try {
+                val lastIndex =
+                    binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
+                val lastChar =
+                    binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
+                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo(
+                        '+'
+                    ) == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)
+                ) {
                     Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
                 } else {
                     binding.editTextTextPersonName2.append("+")
                 }
-            }catch (e:Exception){
+            } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
         binding.button9.setOnClickListener {
-            try{
-                val lastIndex = binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
-                val lastChar = binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
-                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo('+') == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)) {
+            try {
+                val lastIndex =
+                    binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
+                val lastChar =
+                    binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
+                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo(
+                        '+'
+                    ) == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)
+                ) {
                     Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
                 } else {
                     binding.editTextTextPersonName2.append("-")
                 }
-            }catch (e:Exception){
+            } catch (e: Exception) {
                 e.printStackTrace()
                 binding.editTextTextPersonName2.append("-")
             }
         }
         binding.button23.setOnClickListener {
-           try{
-               val lastIndex = binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
-               val lastChar = binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
-               if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo('+') == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)) {
-                   Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
-               } else {
-                   binding.editTextTextPersonName2.append("*")
-               }
-           }catch (e:Exception){
-               e.printStackTrace()
-           }
+            try {
+                val lastIndex =
+                    binding.editTextTextPersonName2.text.toString().toCharArray().size - 1
+                val lastChar =
+                    binding.editTextTextPersonName2.text.toString().toCharArray()[lastIndex]
+                if ((lastChar.compareTo('.') == 0) or (lastChar.compareTo('-') == 0) or (lastChar.compareTo(
+                        '+'
+                    ) == 0) or (lastChar.compareTo('*') == 0) or (lastChar.compareTo('/') == 0)
+                ) {
+                    Log.d("Tag", "onCreate: $lastIndex  : $lastChar")
+                } else {
+                    binding.editTextTextPersonName2.append("*")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
         binding.button6.setOnClickListener {
             binding.editTextTextPersonName2.append("/1.2")
@@ -251,8 +261,6 @@ class Calculator : AppCompatActivity() {
             }
             binding.editTextTextPersonName.setText("")
         }
-        //Will clear input and ouput field
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -269,8 +277,7 @@ class Calculator : AppCompatActivity() {
             )
         }
         if (item.itemId == R.id.SettingsAction) {
-            val intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(SettingActivity::class)
         }
         return super.onOptionsItemSelected(item)
     }
@@ -281,8 +288,8 @@ class Calculator : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
 
     }
+
     override fun onBackPressed() {
-        val intent = Intent(this , Main::class.java)
-        startActivity(intent)
+        ActivityIntent(Main::class)
     }
 }

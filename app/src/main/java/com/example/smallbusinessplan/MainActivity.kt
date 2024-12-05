@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.smallbusinessplan.Activities.*
 import com.example.smallbusinessplan.R.id.nav_view
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.google.android.material.navigation.NavigationView
 
 

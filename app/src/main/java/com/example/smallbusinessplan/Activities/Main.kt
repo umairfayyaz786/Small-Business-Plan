@@ -19,17 +19,17 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.ads.Classes.Strategies.bannerAds
 import com.example.ads.Classes.Strategies.interstitialAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.Utils.NetworkUtils
 import com.example.smallbusinessplan.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
@@ -158,33 +158,27 @@ class Main : AppCompatActivity() {
 
         binding.setting.setOnClickListener {
             id = 0
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         binding.businessPlan.setOnClickListener {
             id = 1
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         binding.finances.setOnClickListener {
             id = 2
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         binding.legalSide.setOnClickListener {
             id = 3
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         binding.marketing.setOnClickListener {
             id = 4
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         binding.launching.setOnClickListener {
             id = 5
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
+            ActivityIntent(CategoriesActivity::class)
         }
         toggle = ActionBarDrawerToggle(this, binding.drawyerlayout, R.string.open, R.string.close)
         binding.drawyerlayout.addDrawerListener(toggle)
@@ -195,8 +189,7 @@ class Main : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
-                    val intent = Intent(this, Main::class.java)
-                    startActivity(intent)
+                    ActivityIntent(Main::class)
                 }
 
                 R.id.sharemenu -> {
@@ -244,8 +237,7 @@ class Main : AppCompatActivity() {
 
 
     private fun calculator() {
-        val i = Intent(this, Calculator::class.java)
-        startActivity(i)
+        ActivityIntent(Calculator::class)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

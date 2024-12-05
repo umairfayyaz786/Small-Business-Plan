@@ -15,8 +15,10 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
+import com.example.smallbusinessplan.Extensions.showToast
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
@@ -47,26 +49,25 @@ class NetProfit : AppCompatActivity() {
             if (binding.Saless.text.toString().isEmpty() || binding.Saless.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "Sales must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.sales_must_be_required))
                 return@setOnClickListener
             }
             if (binding.COstOfSalesss.text.toString()
                     .isEmpty() || binding.COstOfSalesss.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Cost of Sales Credit must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                showToast(getString(R.string.cost_of_sales_credit_must_be_required))
                 return@setOnClickListener
             }
             if (binding.Depreciation.text.toString()
                     .isEmpty() || binding.Depreciation.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Depreciation must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.depreciation_must_be_required))
                 return@setOnClickListener
             }
             if (binding.Expenses.text.toString().isEmpty() || binding.Expenses.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "Expenses must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.expenses_must_be_required))
                 return@setOnClickListener
             }
             val sales_per_year = binding.Saless.text.toString().toDouble()
@@ -86,15 +87,13 @@ class NetProfit : AppCompatActivity() {
             binding.NetProfitPercent.text = Net_Profit_Percentage.toString()
         }
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(
@@ -130,7 +129,6 @@ class NetProfit : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

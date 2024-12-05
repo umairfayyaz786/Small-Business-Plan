@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.MenuItem
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
+import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.databinding.ActivityFormulasBinding
 
 class FormulasActivity : AppCompatActivity() {
@@ -16,8 +18,7 @@ class FormulasActivity : AppCompatActivity() {
         binding = ActivityFormulasBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Formulas"
-
+        supportActionBar?.title = getString(R.string.formulas)
         binding.tv2.movementMethod = LinkMovementMethod.getInstance()
         binding.tv10.movementMethod = LinkMovementMethod.getInstance()
         binding.tv12.movementMethod = LinkMovementMethod.getInstance()
@@ -32,14 +33,12 @@ class FormulasActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

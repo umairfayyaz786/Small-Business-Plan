@@ -15,8 +15,10 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
+import com.example.smallbusinessplan.Extensions.showToast
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
@@ -34,22 +36,22 @@ class Discount : AppCompatActivity() {
         binding = ActivityDiscountBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title= Html.fromHtml("<small>DISCOUNT</small>")
+        supportActionBar?.title= Html.fromHtml(getString(R.string.small_discount_small))
 
         bannerAd=findViewById(R.id.DiscountBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            bannerAds(this, bannerAd, getString(R.string.small_banner))
         } else {
             bannerAd.gone()
         }
         binding.calculate.setOnClickListener {
             if (binding.normalprice1.text.toString().isEmpty() || binding.normalprice1.text.toString().isBlank()){
-                Toast.makeText(this, "Normal Price must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.normal_price_must_be_required))
                 return@setOnClickListener
             }
             if (binding.DiscountPercent.text.toString().isEmpty() || binding.DiscountPercent.text.toString().isBlank()){
-                Toast.makeText(this, "Discount % must be required!", Toast.LENGTH_SHORT).show()
+               showToast(getString(R.string.discount_must_be_required))
                 return@setOnClickListener
             }
             val normalprice11 = binding.normalprice1.text.toString().toDouble()
@@ -63,11 +65,11 @@ class Discount : AppCompatActivity() {
         }
         binding.calculate2.setOnClickListener {
             if (binding.normalprice2.text.toString().isEmpty() || binding.normalprice2.text.toString().isBlank()){
-                Toast.makeText(this, "Normal Price must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.normal_price_must_be_required))
                 return@setOnClickListener
             }
             if (binding.DiscountPercent2.text.toString().isEmpty() || binding.DiscountPercent2.text.toString().isBlank()){
-                Toast.makeText(this, "Discount must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.discount_simple_must_be_required))
                 return@setOnClickListener
             }
             val normalprice22 = binding.normalprice2.text.toString().toDouble()
@@ -80,14 +82,12 @@ class Discount : AppCompatActivity() {
         }
 
         binding.formula.setOnClickListener {
-            val i = Intent(this , FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home){
-            val i = Intent(this , Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction){
             startActivity(
@@ -120,8 +120,7 @@ class Discount : AppCompatActivity() {
 
     }
     override fun onBackPressed() {
-        val intent = Intent(this , Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 
 }

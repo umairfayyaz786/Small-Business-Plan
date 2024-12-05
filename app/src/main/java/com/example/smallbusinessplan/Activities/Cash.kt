@@ -10,8 +10,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
+import com.example.smallbusinessplan.Extensions.showToast
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.Utils.NetworkUtils
@@ -28,13 +30,11 @@ class Cash : AppCompatActivity() {
         binding = ActivityCashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = Html.fromHtml("<small>CASH</small>")
-
-
+        supportActionBar?.title = Html.fromHtml(getString(R.string.small_cash_small))
         bannerAd = findViewById(R.id.CashBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
             bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            bannerAds(this, bannerAd, getString(R.string.small_banner))
         } else {
             bannerAd.gone()
         }
@@ -43,31 +43,29 @@ class Cash : AppCompatActivity() {
             if (binding.saless.text.toString().isEmpty() || binding.saless.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "Sales must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.sales_must_be_required))
                 return@setOnClickListener
             }
             if (binding.days.text.toString().isEmpty() || binding.days.text.toString().isBlank()) {
-                Toast.makeText(this, "Customer Days Credit must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                showToast(getString(R.string.customer_days_credit_must_be_required))
                 return@setOnClickListener
             }
             if (binding.CostOfSaless.text.toString()
                     .isEmpty() || binding.CostOfSaless.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Cost of Sales must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.cost_of_sales_must_be_required))
                 return@setOnClickListener
             }
             if (binding.Expenses.text.toString().isEmpty() || binding.Expenses.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "Expenses must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.expenses_must_be_required))
                 return@setOnClickListener
             }
             if (binding.SuplierDaysCredit.text.toString()
                     .isEmpty() || binding.SuplierDaysCredit.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Supplier Days Credit must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                showToast(getString(R.string.supplier_days_credit_must_be_required))
                 return@setOnClickListener
             }
             val sales_per_year = binding.saless.text.toString().toDouble()
@@ -89,15 +87,13 @@ class Cash : AppCompatActivity() {
             binding.NetcashResult.text = netCash.toString()
         }
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(
@@ -133,7 +129,6 @@ class Cash : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

@@ -1,9 +1,8 @@
-package com.example.smallbusinessplan
+package com.example.smallbusinessplan.Utils
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.text.TextUtils
-import java.security.Key
 
 class SharedPref(context: Context) {
 

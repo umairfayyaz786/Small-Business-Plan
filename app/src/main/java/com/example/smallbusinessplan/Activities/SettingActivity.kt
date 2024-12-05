@@ -6,12 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
 import com.example.smallbusinessplan.databinding.ActivitySettingBinding
 
@@ -26,25 +25,24 @@ class SettingActivity : AppCompatActivity() {
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Set Your Tax"
+        supportActionBar?.title = getString(R.string.set_your_tax)
         sharedPref = SharedPref(this)
         binding.settax.setText(sharedPref.getIntegerValue(AppConstants.TEXT_KEY).toString())
         binding.save.setOnClickListener {
             val set_Tax = binding.settax.text.toString().toDouble()
             sharedPref.setIntegerValue(AppConstants.TEXT_KEY, set_Tax)
-            Toast.makeText(this, "GST/VAT value saved successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,
+                getString(R.string.gst_vat_value_saved_successfully), Toast.LENGTH_SHORT).show()
         }
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.setting_reviews) {
             startActivity(
@@ -65,7 +63,6 @@ class SettingActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }

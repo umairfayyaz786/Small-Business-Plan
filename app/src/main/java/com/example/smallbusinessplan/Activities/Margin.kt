@@ -5,28 +5,28 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.renderscript.ScriptGroup.Binding
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.ads.Classes.Strategies.bannerAds
+import com.example.smallbusinessplan.Extensions.ActivityIntent
 import com.example.smallbusinessplan.Extensions.Calculator
 import com.example.smallbusinessplan.Extensions.gone
+import com.example.smallbusinessplan.Extensions.showToast
 import com.example.smallbusinessplan.Extensions.visible
 import com.example.smallbusinessplan.R
-import com.example.smallbusinessplan.SharedPref
+import com.example.smallbusinessplan.Utils.SharedPref
 import com.example.smallbusinessplan.Utils.AppConstants
 import com.example.smallbusinessplan.Utils.NetworkUtils
 import com.example.smallbusinessplan.databinding.ActivityMarginBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class Margin : AppCompatActivity() {
-    private lateinit var bannerAd: FrameLayout
     private var MainMenu: Menu? = null
     private lateinit var sharedPref: SharedPref
     private lateinit var binding: ActivityMarginBinding
@@ -37,33 +37,30 @@ class Margin : AppCompatActivity() {
         binding = ActivityMarginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = Html.fromHtml("<small>MARGIN</small>")
+        supportActionBar?.title = Html.fromHtml(getString(R.string.small_margin_small))
         sharedPref = SharedPref(this)
-
-        bannerAd = findViewById(R.id.MarginBannerAd)
         if (NetworkUtils.isNetworkAvailable(this)) {
-            bannerAd.visible()
-            bannerAds(this, bannerAd, "SMALL_BANNER")
+            binding.MarginBannerAd.visible()
+            bannerAds(this, binding.MarginBannerAd, getString(R.string.small_banner))
         } else {
-            bannerAd.gone()
+            binding.MarginBannerAd.gone()
         }
         binding.tax.setText(sharedPref.getIntegerValue(AppConstants.TEXT_KEY).toString())
         binding.calculate.setOnClickListener {
             if (binding.salesGrossPrice.text.toString()
                     .isEmpty() || binding.salesGrossPrice.text.toString().isBlank()
             ) {
-                Toast.makeText(this, "Sales Gross Price must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                showToast(getString(R.string.sales_gross_price_must_be_required))
                 return@setOnClickListener
             }
             if (binding.tax.text.toString().isEmpty() || binding.tax.text.toString().isBlank()) {
-                Toast.makeText(this, "GST/VST % must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.gst_vst_percent_must_be_required))
                 return@setOnClickListener
             }
             if (binding.costPrice.text.toString().isEmpty() || binding.costPrice.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(this, "Cost Price must be required!", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.cost_price_must_be_required))
                 return@setOnClickListener
             }
             val sales_Gross_Pricee = binding.salesGrossPrice.text.toString().toDouble()
@@ -82,15 +79,13 @@ class Margin : AppCompatActivity() {
             binding.MarginPercentResult.text = margin.toString()
         }
         binding.formula.setOnClickListener {
-            val i = Intent(this, FormulasActivity::class.java)
-            startActivity(i)
+            ActivityIntent(FormulasActivity::class)
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            val i = Intent(this, Calculator::class.java)
-            startActivity(i)
+            ActivityIntent(Calculator::class)
         }
         if (item.itemId == R.id.ReviewsAction) {
             startActivity(
@@ -126,7 +121,6 @@ class Margin : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, Calculator::class.java)
-        startActivity(intent)
+        ActivityIntent(Calculator::class)
     }
 }
