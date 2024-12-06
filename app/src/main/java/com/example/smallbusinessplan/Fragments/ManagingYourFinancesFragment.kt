@@ -36,7 +36,7 @@ class ManagingYourFinancesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (NetworkUtils.isNetworkAvailable(requireContext())) {
             binding.ManagingBannerAd.visible()
-            bannerAds(requireActivity(), binding.ManagingBannerAd, "SMALL_BANNER")
+            bannerAds(requireActivity(), binding.ManagingBannerAd, getString(R.string.small_banner))
         } else {
             binding.ManagingBannerAd.gone()
         }

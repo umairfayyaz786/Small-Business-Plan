@@ -37,7 +37,7 @@ class LaunchingYourBusinessFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (NetworkUtils.isNetworkAvailable(requireContext())) {
             binding.LaunchingBannerAd.visible()
-            bannerAds(requireActivity(), binding.LaunchingBannerAd, "SMALL_BANNER")
+            bannerAds(requireActivity(), binding.LaunchingBannerAd, getString(R.string.small_banner))
         } else {
             binding.LaunchingBannerAd.gone()
         }

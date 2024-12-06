@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.smallbusinessplan.Activities.FormulasActivity
 import com.example.smallbusinessplan.Extensions.FragmentIntent
+import com.example.smallbusinessplan.Extensions.FragmentShowToast
 import com.example.smallbusinessplan.R
 import com.example.smallbusinessplan.databinding.FragmentBusinessSalesBinding
 
@@ -31,43 +32,36 @@ class BusinessSales : Fragment() {
             if (binding.sale1.text.toString().isEmpty() || binding.sale1.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(context, "Sales Stage 1 must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.sales_stage_1))
                 return@setOnClickListener
             }
             if (binding.sale2.text.toString().isEmpty() || binding.sale2.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(context, "Sales Stage 2 must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.sales_stage_2))
                 return@setOnClickListener
             }
-            if (binding.sale3.text.toString().isEmpty() || binding.sale3.text.toString()
-                    .isBlank()
+            if (binding.sale3.text.toString().isEmpty() || binding.sale3.text.toString().isBlank()
             ) {
-                Toast.makeText(context, "Sales Stage 3 must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.sales_stage_3))
                 return@setOnClickListener
             }
             if (binding.sale4.text.toString().isEmpty() || binding.sale4.text.toString()
                     .isBlank()
             ) {
-                Toast.makeText(context, "Sales Stage 4 must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.sales_stage_4))
                 return@setOnClickListener
             }
             if (binding.BuyersActual.text.toString()
                     .isEmpty() || binding.BuyersActual.text.toString().isBlank()
             ) {
-                Toast.makeText(context, "Actual Buyers must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.actual_buyers_must_be_required))
                 return@setOnClickListener
             }
             if (binding.BuyersTarget.text.toString()
                     .isEmpty() || binding.BuyersTarget.text.toString().isBlank()
             ) {
-                Toast.makeText(context, "Buyers Target must be required!", Toast.LENGTH_SHORT)
-                    .show()
+                FragmentShowToast(getString(R.string.buyers_target_must_be_required))
                 return@setOnClickListener
             }
             val Stage1 = binding.sale1.text.toString().toDouble()

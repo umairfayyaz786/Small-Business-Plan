@@ -189,7 +189,7 @@
             android:textSize="19dp"/>
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/bannerad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

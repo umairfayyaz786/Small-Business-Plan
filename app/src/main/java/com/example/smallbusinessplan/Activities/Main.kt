@@ -125,7 +125,6 @@ class Main : AppCompatActivity() {
 
     }
 
-    private lateinit var bannerad: FrameLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         actionBar?.setTitle("Small Business Plan")
         super.onCreate(savedInstanceState)
@@ -147,13 +146,13 @@ class Main : AppCompatActivity() {
 
 
 
-        bannerad = findViewById(R.id.MainBannerAd)
+
         if (NetworkUtils.isNetworkAvailable(this)) {
             interstitialAds(this)
-            bannerad.visible()
-            bannerAds(this, bannerad, "SMALL_BANNER")
+            binding.bannerad.visible()
+            bannerAds(this, binding.bannerad, getString(R.string.small_banner))
         } else {
-            bannerad.gone()
+            binding.bannerad.gone()
         }
 
         binding.setting.setOnClickListener {

@@ -38,7 +38,7 @@ class CoveringTheLegalSideFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (NetworkUtils.isNetworkAvailable(requireContext())) {
             binding.LegalBannerAd.visible()
-            bannerAds(requireActivity(), binding.LegalBannerAd, "SMALL_BANNER")
+            bannerAds(requireActivity(), binding.LegalBannerAd, getString(R.string.small_banner))
         } else {
             binding.LegalBannerAd.gone()
         }

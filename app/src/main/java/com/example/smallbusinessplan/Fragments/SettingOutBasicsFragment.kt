@@ -38,7 +38,7 @@ class SettingOutBasicsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (NetworkUtils.isNetworkAvailable(requireContext())) {
             binding.SettingBannerAd.visible()
-            bannerAds(requireActivity(), binding.SettingBannerAd, "SMALL_BANNER")
+            bannerAds(requireActivity(), binding.SettingBannerAd, getString(R.string.small_banner))
         } else {
             binding.SettingBannerAd.gone()
         }
